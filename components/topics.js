@@ -142,7 +142,7 @@ const Topics = (props) => {
                         style={{ "--width": 507, "--height": 618 }}
                       >
                         <Image
-                          src={`http://localhost:1337${item.attributes.image.data.attributes.url}`}
+                          src={`https://api.myforexbuddy.com${item.attributes.image.data.attributes.url}`}
                           width="507"
                           height="618"
                           loading="lazy"
