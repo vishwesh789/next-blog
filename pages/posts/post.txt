@@ -1,0 +1,112 @@
+Speaker 1
+·
+00:00
+So Next JS has been around for a while now and it's gotten really mature and it really should be the default go to react tool of choice if you're going to use React in any kind of web environment. And I say that with a pretty strong opinion like that because it's true. If I was going to build a social media network today, I'd use Next JS for the front end. If I was going to build a large, massive 20,000 page site like CNN.com that had to be server side rendered to have great SEO, I would use Next JS maybe with Headless WordPress or something in the back end. If I was going to build a single page app, I'd absolutely use Next JS. 
+
+speaker
+Speaker 1
+·
+00:35
+There's very few use cases I can even think of where I would not want to use Next JS if I'm using React. So we're going to cover Next JS in a way that covers really what you're getting out of it and why. I've noticed a lot of people still default to create react app and they're slowing themselves down, they're getting less production readiness out of going that route and I think just causing more developer frustration. So let's get into Next JS and why I like it so much and how fast it is to get great things accomplished in Next JS. So the first thing you got to do is you have to install Next React and react Dom. So let's do that. Great. Now that's done, we need to do a little bit of convention. 
+
+speaker
+Speaker 1
+·
+01:19
+We're going to add a Pages folder and I normally don't like products and tools that use convention over configuration. I think it's a frustrating developer experience if you're not used to that tool and don't use it all day in and day out. But Next JS has so little convention and abstracts away just so much misery with that little convention that it really is a win. It's the best way to go about it. So one of the conventions is make a Pages folder for your pages to go in. So I'm going to add an index in here. This will be my home page, which is by default index JS, which you would be assumed. I'm also going to make a products page. And so let's go ahead and start up our dev server, which you get by running NextDev. 
+
+speaker
+Speaker 1
+·
+02:04
+You can also run Next Build and Next Start for a production environment. But we're going to do dev for now. So NPX, Next Dev and we have a server running on localhost 3000 now. So let's go there. And you can say that, hey, we don't have a react component index. Basically my index JS is a react component. So all I have to do is add a react component here. You can see that it automatically refreshed for me because I have hot reloading out of the box. I can add exclamation marks, hit save and everything just refreshes phenomenally. So there we go. I have my index page. Let's copy this over to a Products page. And now I can go to Slash Products and also get high. So that's basically you've got this routing built in. You don't really have to think about routing. 
+
+speaker
+Speaker 1
+·
+02:57
+I can also use the routing so I can go, let's go use Router and import use router. So I can actually now explicitly use this router and say, hey, what's the router query? So you can see there's no query there. But if I go and foo equals bar, then I automatically have foo bar and name equals will. So you can automatically get your query params in there and you can also add params to the actual URL path. So make this a little bigger here. You can see that I've got foobar and name equals will, but I could also make Products go products one two three or 989898. So that's going to be a URL param like what you would use in ExpressJS. We can also do that. Let me go and create a product page and I'm going to just do brackets here. 
+
+speaker
+Speaker 1
+·
+03:54
+I'm going to say Product ID and then that's automatically visual Studio code is going to make a folder called Product. My file name is actually called ID JS and I can take this exact same thing here. And you'll see that my router query. If I go to Product one two three, it has ID of one two three in there because that ID right there is going to get translated. So you can instantly have your routes with your query set up. It's really great. Now for navigating back and forth between all these pages, I could definitely use a tags in react standard HTML A tags. But Next also gives you this Next link tag, which gives you a lot of really cool prefetching magic right out of the box. So I'm going to do a tag here. 
+
+speaker
+Speaker 1
+·
+04:38
+Let's import link from Next slash link and I'm going to set up a link tag over to the Products page. So now if I go back home, I've got my Products tag here, I can go back and forth. You don't really see too much magic going on, but what it's actually doing, what Next JS is doing behind the scenes is it's prefetching any link tags that are in the viewport. So whenever a link scrolls into view, it's going to prefetch that component which it does not automatically fetch. And then when the user clicks on the link, it automatically loads that page into view. Single page app, no page refresh happens, although it does update the URL and the user gets a really zippy experience. Let's go ahead and actually test this proof of concept here. 
+
+speaker
+Speaker 1
+·
+05:29
+I'm going to write a console log outside of my react component. So this is going to log when this JavaScript code is loaded into the browser whether the Home page is rendered or not. I'm going to say, hey, Home was loaded. Let's go ahead and pull up my console here. You see that? It says that Home was loaded. And I'm going to also copy this into the Products page and I'm going to say Products Loaded. All right, I'm going to refresh. You see that Home was loaded, but Products was not loaded. So it did not do any prefetching because I'm in dev mode. Dev mode does not do that. Let me go ahead and do NPX. Build and NPX next. Build and NPX next start So I'm going to build and start. 
+
+speaker
+Speaker 1
+·
+06:17
+I'm running in production mode now, and we're going to see something pretty cool. Let's go to refresh my Home page. You can see that Home was loaded and Products was loaded because the Products link is in the viewport. And now I'm instantly going to see you can see there's zero latency at all. It's just rendering the Products page right there in the view. We're not navigating and refreshing any pages. And so if you want to, you can actually change this and turn prefetch to false. Prefetch is by default true. Let's go ahead, cancel my Next and restart my Next server. Let me go back to Home. And you can see that when I refresh home is loaded. Products did not load because prefetch is false. But when I hover, TADA. Products is loaded. Just the act of hovering over it. 
+
+speaker
+Speaker 1
+·
+07:04
+Next JS is going to prefetch the page that the user is about to click on. And now we still have an instant render of that page when we click on it. So a lot of cool stuff is going on there with Next JS. Also, if I right click and view the page source here, you can see that server side rendering is baked in that HTML link that we have going here. Right there. No, where is it? There we are. That HTML. A tag is prerendered. So the page is server side prerendered and then bootstrapped automatically. You don't have to do anything to have universal JavaScript, SSR or whatever you want to call it out of the box. So that's a really great feature that you do nothing to get. 
+
+speaker
+Speaker 1
+·
+07:44
+A very common thing is that you want to add environment variables to your application. So you do that very simply by adding in local file. And then you can say things like, I don't know, ApiUrl. That's something that's very common someurl.com right. So there's my API URL. Now that I've added those environment variables or that environment variable, I just have to stop and restart my dev server and it will pick up on that new end local. You can see there we go. Loaded the environment variables from end local. And I can come over here and prove that we are automatically getting our environment variables. Let's go ahead, hit save. Let's load my page. And you can say hey console logged API URL is someurl.com. But over here in the browser that was not defined. 
+
+speaker
+Speaker 1
+·
+08:41
+One of the cool built in features is that will only expose environment variables to the client that you choose to expose to the client. This first render run happened on the server to render the page that got returned in the HTML response. And then after it gets bootstrapped and it runs in the browser for the first time. This environment variable is not defined. We haven't exposed it yet. All you have to do to expose it is simply say next public API URL. TADA, that was easy. And then we can just have this look for Next public rerunning our server and hitting refresh. And you can see that. Now API URL is defined in the client side as well as the server side. So that's how you do environment variables. And then on your production servers, you don't need this and local file at all. 
+
+speaker
+Speaker 1
+·
+09:38
+You literally just define your environment variables on whatever machine environment you're running that in. And TADA, you can build once and run anywhere. One more piece of convention that they add in that's extremely helpful is you can add a public folder. Let's create a folder called Public and public now serves any static assets that we throw in there. So let's reveal this in Finder. TADA, let's drag an image in here, nice little smiley image. And now I can go to my local server smiley, or I can add that smiley image now in all my pages and it's going to automatically serve from that public folder. 
+
+speaker
+Speaker 1
+·
+10:18
+Another thing you can do is if you want to wrap all of the pages in all of your sites, kind of like a site level wrapper maybe that maintains an app level store with the user's login status and profile status. You can automatically create a new file called underscoreapp JS and then app is a single component. And this will automatically get one prop. The component prop and you can return the components. So when I do this right here, I've just wrapped every single page that I have with this app component. So if I kill my dev server here and restart my dev server, then the app component will now wrap everything. I can console log that appran. You can see that every single page I go to is going to say, hey, app ran. I could wrap this with a bunch of context providers. 
+
+speaker
+Speaker 1
+·
+11:17
+I could make every single page on my website just be an h one that's completely worthless. I don't know why anybody would ever do that. But anyway, you can have persistent layouts that kind of always keep a menu in the top header as all the other pages load. You can do a lot of great stuff with the AppJS file. You can also go one level higher and you can make an underscore document JS which is going to actually manage the headers and everything on the page if you want. I will often use AppJS on an application to automatically route to the login for any pages that shouldn't be public. You can easily set in a rule here of routes. Hey, if the route is allowed to be public, great. If not, bump the user to log in. 
+
+speaker
+Speaker 1
+·
+12:00
+You can have a store that manages the user's profile, login status, and any high level app configurations like user configured themes, things like that. Great way to dump stuff in here. And then automatically your entire web app can take advantage of things that are wrapped at a higher level. So that's a very useful feature as well. All right, so now I'll wrap it up by talking about how you actually ship Next JS off to production. You really have a couple of ways to go about it. Again, you can build up your docker file or whatever you're using to deploy your code. You can throw your code in and then you just have to run Next Build and Next Start, and you have your production web server. It's done, it's ready to go. And you're actually running a Node JS server. 
+
+speaker
+Speaker 1
+·
+12:46
+If you want to convert this to static HTML, you can also do that. You just do build and NPX Next export. And what that's going to do is it's actually going to build flat HTML files for each one of your pages. You'll get an out folder here, which we should see in about there you go, 1 second. And you can see now we've got all our HTML files. The one caveat here is I've got my ID HTML. That's not going to go so good. A user is not going to navigate to slash bracketid. Now you can actually configure Next JS to generate a static HTML page for every single product you have. 
+
+speaker
+Speaker 1
+·
+13:23
+If you want to say, pull all the products from WordPress or something like that, headless WordPress, and then spit them all out, generate them all in HTML, it can do that, and it can do that very quickly. If you don't need that feature, you can simply have it called product HTML and use the HTML query param that I used earlier, right? ID equals and then that page is going to work for everything and you don't have to worry about building out 1000 HTML pages. So it really depends on what you're going after, if there's SEO value in your export or not. Deploying next JS is effortless. We are already production ready. We have everything we need to go with Next JS. 
+
+speaker
+Speaker 1
+·
+14:04
+You can usually get some semblance of an app out the very first day you start working on it, which is obviously impressive people on the outside, but feels phenomenal as a developer. It's just one of those tools that maximizes the time you put in. I hope you enjoyed learning about Next JS today. If you have any questions, leave them in the comments. I always try to, especially the day or two after a video is released. Stay very connected to the comments. Try to answer any questions, which is why it pays to subscribe. Hit the subscribe button and I will see you around. 
