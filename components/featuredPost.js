@@ -4,7 +4,6 @@ import { useRouter } from "next/router";
 
 const FeaturedPost = (props) => {
   const router = useRouter();
-  console.log("querrryyyyyyyyyy  featttttt", router.query.category,props.data.articlesCatWise.item,props.data.articles.item);
 
   const articles =
     !router.query.category || router.query.category == ("articles" || undefined)
