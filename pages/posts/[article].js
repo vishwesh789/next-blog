@@ -5,8 +5,8 @@ import qs from "qs";
 import { fetchArticles, fetchCategories } from "../../http";
 
 const Posts = (props) => {
-  console.log("propsssssssss in article",props.article[0].attributes)
-  const article = props.article
+  console.log("propsssssssss in article", props.article[0].attributes);
+  const article = props.article;
   return (
     <Layout data={props}>
       <div className="container" style={{ marginTop: 120 }}>
@@ -55,7 +55,9 @@ const Posts = (props) => {
                 />
 
                 <div>
-                  <p className="card-title">{article[0].attributes.author.data.attributes.username}</p>
+                  <p className="card-title">
+                    {article[0].attributes.author.data.attributes.username}
+                  </p>
 
                   <p className="card-subtitle">25 Nov 2022</p>
                 </div>
@@ -66,7 +68,7 @@ const Posts = (props) => {
                 {article[0].attributes.title}
               </Link>
             </h1>
-            <p
+            <div
               style={{
                 marginTop: 100,
                 wordSpacing: 2,
@@ -74,10 +76,10 @@ const Posts = (props) => {
                 fontFamily: "monospace",
                 fontSize: 20,
               }}
-            >
-             {article[0].attributes.body.section1}
-            </p>
-            
+              dangerouslySetInnerHTML={{
+                __html: article[0].attributes.body.section2,
+              }}
+            />
           </div>
         </div>
       </div>
@@ -108,7 +110,7 @@ export async function getServerSideProps({ query }) {
         category: true,
         image: true,
         author: true,
-        body:true,
+        body: true,
       },
       filters: {
         slug: { $eq: query.article },
@@ -119,17 +121,15 @@ export async function getServerSideProps({ query }) {
     }
   );
 
-
-
   const article = await fetchArticles(artQueryWithFilter);
 
-    console.log("article ssrrrrrrrrrr",query);
+  console.log("article ssrrrrrrrrrr", query);
 
   // Pass data to the page via props
   return {
     props: {
       categories: categories.data.data,
-     article:article.data.data
+      article: article.data.data,
     },
   };
 }
