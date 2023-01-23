@@ -3,10 +3,26 @@ import Link from "next/link";
 import Layout from "../../components/layout";
 import qs from "qs";
 import { fetchArticles, fetchCategories } from "../../http";
+import { remark } from "remark";
+import html from "remark-html";
+import { useEffect, useState } from "react";
 
 const Posts = (props) => {
-  console.log("propsssssssss in article", props.article[0].attributes);
+  // console.log("propsssssssss in article", props.article[0].attributes);
   const article = props.article;
+  const m = article[0].attributes.body.section2;
+
+  const [content, setContent] = useState("");
+
+  useEffect(() => {
+    async function MarkdownToHtml(m) {
+      const result = await remark().use(html).process(m);
+      setContent(result);
+    }
+    MarkdownToHtml(m);
+    return () => {};
+  }, []);
+
   return (
     <Layout data={props}>
       <div className="container" style={{ marginTop: 120 }}>
@@ -77,9 +93,9 @@ const Posts = (props) => {
                 fontSize: 20,
               }}
               dangerouslySetInnerHTML={{
-                __html: article[0].attributes.body.section2,
+                __html: content,
               }}
-            />
+            />{" "}
           </div>
         </div>
       </div>
