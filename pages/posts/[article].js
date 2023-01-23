@@ -8,6 +8,7 @@ import html from "remark-html";
 import { useEffect, useState } from "react";
 
 const Posts = (props) => {
+  
   // console.log("propsssssssss in article", props.article[0].attributes);
   const article = props.article;
   const m = article[0].attributes.body.section2;
