@@ -90,7 +90,6 @@ const Posts = (props) => {
                 marginTop: 100,
                 wordSpacing: 2,
                 color: "golden",
-                fontFamily: "monospace",
                 fontSize: 20,
               }}
               dangerouslySetInnerHTML={{
