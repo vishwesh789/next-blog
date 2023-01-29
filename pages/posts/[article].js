@@ -91,8 +91,35 @@ const Posts = (props) => {
   );
 };
 
-export async function getServerSideProps({ query }) {
+export async function getStaticPaths() {
+  const query = qs.stringify(
+    {
+      fields: ['slug'],
+    },
+    {
+      encodeValuesOnly: true, // prettify URL
+    }
+  );
+  const slugs = await fetchArticles(query);
+// console.log("slugsssssss",slugs.data)
+  const pathArray = [];
+  
+
+  slugs.data.data.forEach(myFunction);
+
+  function myFunction(value, index, array) {
+  pathArray.push({params:{article:value.attributes.slug}})
+}
+
+  return {
+    paths: pathArray,
+    fallback: false, // can also be true or 'blocking'
+  }
+}
+
+export async function getStaticProps(context) {
   // Fetch data from external API
+  console.log("contexttttt",context)
 
   const catQuery = qs.stringify(
     {
@@ -117,7 +144,7 @@ export async function getServerSideProps({ query }) {
         body: true,
       },
       filters: {
-        slug: { $eq: query.article },
+        slug: { $eq: context.params.article },
       },
     },
     {
@@ -127,7 +154,7 @@ export async function getServerSideProps({ query }) {
 
   const article = await fetchArticles(artQueryWithFilter);
 
-  console.log("article ssrrrrrrrrrr", query);
+  // console.log("article ssrrrrrrrrrr", context);
 
   // Pass data to the page via props
   return {

@@ -13,7 +13,33 @@ const Category = (props) => {
 
 export default Category;
 
-export async function getServerSideProps({ query }) {
+export async function getStaticPaths() {
+  const query = qs.stringify(
+    {
+      fields: ['slug'],
+    },
+    {
+      encodeValuesOnly: true, // prettify URL
+    }
+  );
+  const slugs = await fetchCategories(query);
+
+  const pathArray = [{params:{category:"articles"}}];
+  
+
+slugs.data.data.forEach(myFunction);
+
+  function myFunction(value, index, array) {
+  pathArray.push({params:{category:value.attributes.slug}})
+}
+
+  return {
+    paths: pathArray,
+    fallback: false, // can also be true or 'blocking'
+  }
+}
+
+export async function getStaticProps(context) {
   // Fetch data from external API
 
   const catQuery = qs.stringify(
@@ -39,7 +65,7 @@ export async function getServerSideProps({ query }) {
       },
       filters: {
         category: {
-          slug: { $eq: query.category },
+          slug: { $eq: context.params.category },
         },
       },
     },
