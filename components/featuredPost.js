@@ -33,7 +33,7 @@ const FeaturedPost = (props) => {
                     style={{ "--width": 1602, "--height": 903 }}
                   >
                     <Image
-                      src={`https://api.myforexbuddy.com${item.attributes.image.data.attributes.url}`}
+                      src={`http://localhost:1337${item.attributes.image.data.attributes.url}`}
                       width="1602"
                       height="903"
                       loading="lazy"

@@ -21,7 +21,7 @@ const Posts = (props) => {
             style={{ "--width": 1602, "--height": 903 }}
           >
             <Image
-              src={`https://api.myforexbuddy.com${article[0].attributes.image.data.attributes.url}`}
+              src={`http://localhost:1337${article[0].attributes.image.data.attributes.url}`}
               width="1602"
               height="903"
               loading="lazy"
@@ -51,7 +51,7 @@ const Posts = (props) => {
             <div className="card-wrapper">
               <div className="profile-card">
                 <Image
-                  src={`https://api.myforexbuddy.com${article[0].attributes.image.data.attributes.url}`}
+                  src={`http://localhost:1337${article[0].attributes.image.data.attributes.url}`}
                   width="48"
                   height="48"
                   loading="lazy"
