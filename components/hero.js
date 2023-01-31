@@ -8,7 +8,7 @@ const Hero = () => {
           <p className="hero-subtitle">Hello Everyone!</p>
 
           <h1 className="headline headline-1 section-title">
-            I’m <span className="span">Vishwesh</span>
+            I’m <span className="span">Joseph</span>
           </h1>
 
           <p className="hero-text">
@@ -40,7 +40,7 @@ const Hero = () => {
 
         <div className="hero-banner">
           <Image
-            src="/images/vishwesh.png"
+            src="/images/hero-banner.png"
             width={200}
             height={200}
             alt="Wren Clark"
