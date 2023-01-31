@@ -3,7 +3,6 @@ import Link from "next/link";
 import { useEffect, useRef } from "react";
 
 const Navbar = (props) => {
- 
   const navbar = useRef();
 
   const navTogglers = useRef(null);
@@ -11,10 +10,6 @@ const Navbar = (props) => {
   const header = useRef();
 
   const backTopBtn = useRef();
-
-
-
-
 
   const toggleNav = () => {
     console.log("navtogglersss", navTogglers.current);
@@ -27,7 +22,6 @@ const Navbar = (props) => {
     // cleanup this component
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      
     };
   }, []);
 
@@ -35,71 +29,67 @@ const Navbar = (props) => {
     if (window.scrollY > 100) {
       header.current.classList.add("active");
       backTopBtn.current.classList.add("active");
-
     } else {
       header.current.classList.remove("active");
       backTopBtn.current.classList.remove("active");
-
     }
   };
-
-  
 
   const categories = props.data.categories;
   return (
     <div>
-    <header className="header" data-header id="top" ref={header}>
-      <div className="container">
-        <Link href="/" className="logo">
-          <Image
-            src="/images/logo.svg"
-            width="119"
-            height="37"
-            alt="Wren logo"
-          />
-        </Link>
+      <header className="header" data-header id="top" ref={header}>
+        <div className="container">
+          <Link href="/" className="logo">
+            <Image
+              src="/images/logo.svg"
+              width="119"
+              height="37"
+              alt="Wren logo"
+            />
+          </Link>
 
-        <nav className="navbar" data-navbar ref={navbar}>
-          <div className="navbar-top">
-            <Link href="/" className="logo">
-              <Image
-                src="/images/logo.svg"
-                width="119"
-                height="37"
-                alt="Wren logo"
-              />
-            </Link>
+          <nav className="navbar" data-navbar ref={navbar}>
+            <div className="navbar-top">
+              <Link href="/" className="logo">
+                <Image
+                  src="/images/logo.svg"
+                  width="119"
+                  height="37"
+                  alt="Wren logo"
+                />
+              </Link>
 
-            <button
-              className="nav-close-btn"
-              aria-label="close menu"
-              data-nav-toggler
-              ref={navTogglers}
-              onClick={toggleNav}
-            >
-              <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
-            </button>
-          </div>
+              <button
+                className="nav-close-btn"
+                aria-label="close menu"
+                data-nav-toggler
+                ref={navTogglers}
+                onClick={toggleNav}
+              >
+                <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+              </button>
+            </div>
 
-          <ul className="navbar-list">
-            {categories?.map((item, idx) => {
-              return (
-                <li key={item.id}>
-                  <Link
-                    href={`/category/${item.attributes.slug}`}
-                    className="navbar-link hover-1"
-                    data-nav-toggler
-                    ref={navTogglers}
-                    onClick={toggleNav}
-                  >
-                    {item.attributes.title}
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
+            <ul className="navbar-list">
+              {categories?.map((item, idx) => {
+                return (
+                  <li key={item.id}>
+                    <Link
+                      href={`/category/${item.attributes.slug}`}
+                      className="navbar-link hover-1"
+                      data-nav-toggler
+                      ref={navTogglers}
+                      onClick={toggleNav}
+                    >
+                      {item.attributes.title}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
 
-          {/* <div className="navbar-bottom">
+            {/* <div className="navbar-bottom">
             <div className="profile-card">
               <Image
                 src="/images/author-1.png"
@@ -155,37 +145,36 @@ const Navbar = (props) => {
             </ul>
           </div> */}
 
-          <p className="copyright-text">
-            Copyright 2022 © My Forex Buddy -Developed by Vishwesh Singh
-          </p>
-        </nav>
+            <p className="copyright-text">
+              Copyright 2022 © My Forex Buddy -Developed by Vishwesh Singh
+            </p>
+          </nav>
 
-        <Link href="#" className="btn btn-primary">
-          Subscribe
-        </Link>
+          <Link href="#" className="btn btn-primary">
+            Subscribe
+          </Link>
 
-        <button
-          className="nav-open-btn"
-          aria-label="open menu"
-          data-nav-toggler
-          ref={navTogglers}
-          onClick={toggleNav}
-        >
-          <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
-        </button>
-      </div>
-
+          <button
+            className="nav-open-btn"
+            aria-label="open menu"
+            data-nav-toggler
+            ref={navTogglers}
+            onClick={toggleNav}
+          >
+            <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
       </header>
       <Link
-            href="#top"
-            className="back-top-btn"
-            aria-label="back to top"
-            data-back-top-btn
-            ref={backTopBtn}
-          >
-            <ion-icon name="arrow-up-outline" aria-hidden="true"></ion-icon>
-          </Link>
-      </div>
+        href="#top"
+        className="back-top-btn"
+        aria-label="back to top"
+        data-back-top-btn
+        ref={backTopBtn}
+      >
+        <ion-icon name="arrow-up-outline" aria-hidden="true"></ion-icon>
+      </Link>
+    </div>
   );
 };
 

@@ -3,17 +3,19 @@ import Link from "next/link";
 import Layout from "../../components/layout";
 import qs from "qs";
 import { fetchArticles, fetchCategories } from "../../http";
+import Head from "next/head";
 
 const Posts = (props) => {
-  
   console.log("propsssssssss in article", props.article[0].attributes);
   const article = props.article;
   const m = article[0].attributes.body.content;
 
-
-
   return (
     <Layout data={props}>
+      <Head>
+        <title>{article[0].attributes.title}</title>
+        <meta name="description" content={article[0].attributes.metaDesc} />
+      </Head>
       <div className="container" style={{ marginTop: 120 }}>
         <div className="card feature-card">
           <figure
@@ -78,7 +80,7 @@ const Posts = (props) => {
                 marginTop: 100,
                 wordSpacing: 3,
                 fontSize: 20,
-                fontWeight: 'normal',
+                fontWeight: "normal",
               }}
               dangerouslySetInnerHTML={{
                 __html: m,
@@ -94,32 +96,31 @@ const Posts = (props) => {
 export async function getStaticPaths() {
   const query = qs.stringify(
     {
-      fields: ['slug'],
+      fields: ["slug"],
     },
     {
       encodeValuesOnly: true, // prettify URL
     }
   );
   const slugs = await fetchArticles(query);
-// console.log("slugsssssss",slugs.data)
+  // console.log("slugsssssss",slugs.data)
   const pathArray = [];
-  
 
   slugs.data.data.forEach(myFunction);
 
   function myFunction(value, index, array) {
-  pathArray.push({params:{article:value.attributes.slug}})
-}
+    pathArray.push({ params: { article: value.attributes.slug } });
+  }
 
   return {
     paths: pathArray,
     fallback: false, // can also be true or 'blocking'
-  }
+  };
 }
 
 export async function getStaticProps(context) {
   // Fetch data from external API
-  console.log("contexttttt",context)
+  console.log("contexttttt", context);
 
   const catQuery = qs.stringify(
     {
