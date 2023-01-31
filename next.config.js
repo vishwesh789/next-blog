@@ -5,7 +5,7 @@ const nextConfig = {
   reactStrictMode: true,
   trailingSlash: true,
   images: {
-    domains: ['localhost', 'api.myforexbuddy.com'],
+    domains: ['localhost', 'api.myforexbuddy.com','images.unsplash.com'],
   }
 }
 
