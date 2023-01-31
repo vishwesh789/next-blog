@@ -142,7 +142,7 @@ const Topics = (props) => {
                         style={{ "--width": 507, "--height": 618 }}
                       >
                         <Image
-                          src={`http://localhost:1337${item.attributes.image.data.attributes.url}`}
+                          src={item.attributes.img}
                           width="507"
                           height="618"
                           loading="lazy"

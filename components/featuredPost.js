@@ -33,7 +33,7 @@ const FeaturedPost = (props) => {
                     style={{ "--width": 1602, "--height": 903 }}
                   >
                     <Image
-                      src={`http://localhost:1337${item.attributes.image.data.attributes.url}`}
+                      src={item.attributes.img}
                       width="1602"
                       height="903"
                       loading="lazy"
