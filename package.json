@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export":"next build && next export"
+    "export": "next build && next export && next-export-optimize-images"
   },
   "dependencies": {
     "@next/font": "^13.1.5",
@@ -19,5 +19,8 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "sharp": "^0.31.3"
+  },
+  "devDependencies": {
+    "next-export-optimize-images": "^2.0.0"
   }
 }
