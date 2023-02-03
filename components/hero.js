@@ -12,9 +12,8 @@ const Hero = () => {
           </h1>
 
           <p className="hero-text">
-            I use animation as a third dimension by which to simplify
-            experiences and kuiding thro each and every interaction. I’m not
-            adding motion just to spruce things up, but doing it in ways that.
+            Sharing knowledge is my passion. Let's venture on this journey for
+            the truth together... and have some fun along the way.
           </p>
 
           <div className="input-wrapper">

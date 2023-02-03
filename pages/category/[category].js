@@ -16,7 +16,7 @@ export default Category;
 export async function getStaticPaths() {
   const query = qs.stringify(
     {
-      fields: ['slug'],
+      fields: ["slug"],
     },
     {
       encodeValuesOnly: true, // prettify URL
@@ -24,19 +24,18 @@ export async function getStaticPaths() {
   );
   const slugs = await fetchCategories(query);
 
-  const pathArray = [{params:{category:"articles"}}];
-  
+  const pathArray = [{ params: { category: "articles" } }];
 
-slugs.data.data.forEach(myFunction);
+  slugs.data.data.forEach(myFunction);
 
   function myFunction(value, index, array) {
-  pathArray.push({params:{category:value.attributes.slug}})
-}
+    pathArray.push({ params: { category: value.attributes.slug } });
+  }
 
   return {
     paths: pathArray,
     fallback: false, // can also be true or 'blocking'
-  }
+  };
 }
 
 export async function getStaticProps(context) {
@@ -90,7 +89,7 @@ export async function getStaticProps(context) {
 
   const articles = await fetchArticles(artQuery);
 
-//   console.log(articles.data.data,query);
+  //   console.log(articles.data.data,query);
 
   // Pass data to the page via props
   return {

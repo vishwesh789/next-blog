@@ -77,7 +77,7 @@ const Posts = (props) => {
             </h1>
             <div
               style={{
-                marginTop: 100,
+                marginTop: 50,
                 wordSpacing: 3,
                 fontSize: 20,
                 fontWeight: "normal",
