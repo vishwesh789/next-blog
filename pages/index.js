@@ -12,12 +12,15 @@ import Link from "next/link";
 import { useEffect, useRef } from "react";
 
 export default function Home(props) {
- 
-
   return (
     <>
       <Head>
         <title>myforexbuddy - Perosonal Blog Website</title>
+        <meta
+          name="description"
+          content="Sharing knowledge is my passion. Let's venture on this journey for
+            the truth together... and have some fun along the way."
+        />
       </Head>
       <>
         <main>
@@ -30,14 +33,13 @@ export default function Home(props) {
               {/* <RecentPosts /> */}
             </Layout>
           </article>
-          
         </main>
       </>
     </>
   );
 }
 
-export async function getStaticProps({query}) {
+export async function getStaticProps({ query }) {
   // Fetch data from external API
   console.log("querrryyyyyyyyyy  index", query);
 
@@ -70,7 +72,7 @@ export async function getStaticProps({query}) {
 
   const articles = await fetchArticles(artQuery);
 
-  console.log("paginationnnnnnnnnnnnnnn",articles.data.data);
+  console.log("paginationnnnnnnnnnnnnnn", articles.data.data);
 
   // Pass data to the page via props
   return {
