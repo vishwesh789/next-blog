@@ -61,7 +61,6 @@ export async function getStaticProps(context) {
         category: true,
         image: true,
         author: true,
-        body:true
       },
       filters: {
         category: {
@@ -81,7 +80,6 @@ export async function getStaticProps(context) {
         category: true,
         image: true,
         author: true,
-        body:true
       },
     },
     {

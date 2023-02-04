@@ -45,7 +45,7 @@ const FeaturedPost = (props) => {
                   <div className="card-content">
                     <div className="card-wrapper">
                       <div className="card-tag">
-                        {item.attributes.tags.map((tag,index) => {
+                        {item.attributes.tags.map((tag, index) => {
                           return (
                             <Link href="#" className="span hover-2" key={index}>
                               #{tag}
@@ -60,7 +60,9 @@ const FeaturedPost = (props) => {
                           aria-hidden="true"
                         ></ion-icon>
 
-                        <span className="span">{Math.round(item.attributes.body.content.length/6/200)} mins read</span>
+                        <span className="span">
+                          {item.attributes.readTime} mins read
+                        </span>
                       </div>
                     </div>
 

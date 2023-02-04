@@ -9,8 +9,6 @@ const Posts = (props) => {
   // console.log("propsssssssss in article", props.article[0].attributes);
   const article = props.article;
   const m = article[0].attributes.body.content;
-  const readTime = Math.round(m.length/6/200)
-  console.log("type of mmmmmmmmmmmm",readTime)
 
   return (
     <Layout data={props}>
@@ -49,7 +47,7 @@ const Posts = (props) => {
               <div className="wrapper">
                 <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
 
-                <span className="span">{readTime} mins read</span>
+                <span className="span">{article[0].attributes.readTime} mins read</span>
               </div>
             </div>
             <div className="card-wrapper">

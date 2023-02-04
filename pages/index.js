@@ -26,7 +26,7 @@ export default function Home(props) {
               <Hero />
               <Topics data={props} />
               <FeaturedPost data={props} />
-              <PopularTags />
+              {/* <PopularTags /> */}
               {/* <RecentPosts /> */}
             </Layout>
           </article>
@@ -61,7 +61,6 @@ export async function getStaticProps({query}) {
         category: true,
         image: true,
         author: true,
-        body:true,
       },
     },
     {
@@ -71,7 +70,7 @@ export async function getStaticProps({query}) {
 
   const articles = await fetchArticles(artQuery);
 
-  // console.log(articles.data.data);
+  console.log("paginationnnnnnnnnnnnnnn",articles.data.data);
 
   // Pass data to the page via props
   return {
