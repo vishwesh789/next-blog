@@ -45,13 +45,13 @@ const FeaturedPost = (props) => {
                   <div className="card-content">
                     <div className="card-wrapper">
                       <div className="card-tag">
-                        <Link href="#" className="span hover-2">
-                          #Travel
-                        </Link>
-
-                        <Link href="#" className="span hover-2">
-                          #Lifestyle
-                        </Link>
+                        {item.attributes.tags.map((tag,index) => {
+                          return (
+                            <Link href="#" className="span hover-2" key={index}>
+                              #{tag}
+                            </Link>
+                          );
+                        })}
                       </div>
 
                       <div className="wrapper">
@@ -60,12 +60,15 @@ const FeaturedPost = (props) => {
                           aria-hidden="true"
                         ></ion-icon>
 
-                        <span className="span">3 mins read</span>
+                        <span className="span">{Math.round(item.attributes.body.content.length/6/200)} mins read</span>
                       </div>
                     </div>
 
                     <h3 className="headline headline-3">
-                      <Link href={`/posts/${item.attributes.slug}`} className="card-title hover-2">
+                      <Link
+                        href={`/posts/${item.attributes.slug}`}
+                        className="card-title hover-2"
+                      >
                         {item.attributes.title}
                       </Link>
                     </h3>
@@ -86,7 +89,7 @@ const FeaturedPost = (props) => {
                             {item.attributes.author.data.attributes.username}
                           </p>
 
-                          <p className="card-subtitle">25 Nov 2022</p>
+                          {/* <p className="card-subtitle">25 Nov 2022</p> */}
                         </div>
                       </div>
 

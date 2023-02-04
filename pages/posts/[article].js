@@ -6,9 +6,11 @@ import { fetchArticles, fetchCategories } from "../../http";
 import Head from "next/head";
 
 const Posts = (props) => {
-  console.log("propsssssssss in article", props.article[0].attributes);
+  // console.log("propsssssssss in article", props.article[0].attributes);
   const article = props.article;
   const m = article[0].attributes.body.content;
+  const readTime = Math.round(m.length/6/200)
+  console.log("type of mmmmmmmmmmmm",readTime)
 
   return (
     <Layout data={props}>
@@ -35,19 +37,19 @@ const Posts = (props) => {
           <div className="card-content">
             <div className="card-wrapper">
               <div className="card-tag">
-                <Link href="#" className="span hover-2">
-                  {/* #Travel */}
-                </Link>
-
-                <Link href="#" className="span hover-2">
-                  {/* #Lifestyle */}
-                </Link>
+                {article[0].attributes.tags.map((tag,index) => {
+                  return (
+                    <Link href="#" className="span hover-2" key={index}>
+                      #{tag}
+                    </Link>
+                  );
+                })}
               </div>
 
               <div className="wrapper">
                 <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
 
-                <span className="span">3 mins read</span>
+                <span className="span">{readTime} mins read</span>
               </div>
             </div>
             <div className="card-wrapper">
@@ -66,7 +68,7 @@ const Posts = (props) => {
                     {article[0].attributes.author.data.attributes.username}
                   </p>
 
-                  <p className="card-subtitle">25 Nov 2022</p>
+                  {/* <p className="card-subtitle">25 Nov 2022</p> */}
                 </div>
               </div>
             </div>

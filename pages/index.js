@@ -17,7 +17,7 @@ export default function Home(props) {
   return (
     <>
       <Head>
-        <title>Wren - Perosonal Blog Website</title>
+        <title>myforexbuddy - Perosonal Blog Website</title>
       </Head>
       <>
         <main>
@@ -61,6 +61,7 @@ export async function getStaticProps({query}) {
         category: true,
         image: true,
         author: true,
+        body:true,
       },
     },
     {
