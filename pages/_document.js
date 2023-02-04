@@ -4,11 +4,6 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <meta name="title" content="myforexbuddy - Perosonal Blog Website" />
-        <meta
-          name="description"
-          content="This is a blog html template made by vishwesh"
-        />
         <link rel="icon" href="/favicon.svg" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
