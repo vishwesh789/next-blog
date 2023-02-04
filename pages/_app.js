@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import * as gtag from "../lib/gtag";
 
 // Font files can be colocated inside of `pages`
-const myFont = localFont({ src: "../public/fonts/VAGRundschriftD.ttf" });
+// const myFont = localFont({ src: "../public/fonts/VAGRundschriftD.ttf" });
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
@@ -23,7 +23,7 @@ export default function App({ Component, pageProps }) {
   }, [router.events]);
 
   return (
-    <main className={myFont.className}>
+    <main >
       <Script
         strategy="afterInteractive"
         async
