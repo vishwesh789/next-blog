@@ -35,7 +35,7 @@ const Posts = (props) => {
           <div className="card-content">
             <div className="card-wrapper">
               <div className="card-tag">
-                {article[0].attributes.tags.map((tag, index) => {
+                {article[0].attributes.tags.map((tag,index) => {
                   return (
                     <Link href="#" className="span hover-2" key={index}>
                       #{tag}
@@ -47,9 +47,7 @@ const Posts = (props) => {
               <div className="wrapper">
                 <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
 
-                <span className="span">
-                  {article[0].attributes.readTime} mins read
-                </span>
+                <span className="span">{article[0].attributes.readTime} mins read</span>
               </div>
             </div>
             <div className="card-wrapper">
@@ -72,24 +70,22 @@ const Posts = (props) => {
                 </div>
               </div>
             </div>
-            <div>
-              <h1 className="headline headline-3">
-                <Link href="#" className="card-title hover-2">
-                  {article[0].attributes.title}
-                </Link>
-              </h1>
-              <div
-                style={{
-                  marginTop: 30,
-                  wordSpacing: 3,
-                  fontSize: 20,
-                  fontWeight: "normal",
-                }}
-                dangerouslySetInnerHTML={{
-                  __html: m,
-                }}
-              />
-            </div>
+            <h1 className="headline headline-3">
+              <Link href="#" className="card-title hover-2">
+                {article[0].attributes.title}
+              </Link>
+            </h1>
+            <div
+              style={{
+                marginTop: 30,
+                wordSpacing: 3,
+                fontSize: 18,
+                fontWeight: "normal",
+              }}
+              dangerouslySetInnerHTML={{
+                __html: m,
+              }}
+            />
           </div>
         </div>
       </div>
