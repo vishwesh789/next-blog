@@ -95,7 +95,7 @@ const FeaturedPost = (props) => {
                         </div>
                       </div>
 
-                      <Link href="#" className="card-btn">
+                      <Link href={`/posts/${item.attributes.slug}`} className="card-btn">
                         Read more
                       </Link>
                     </div>
