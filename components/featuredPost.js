@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import Head from "next/head";
+
 
 const FeaturedPost = (props) => {
   const router = useRouter();
@@ -12,6 +14,11 @@ const FeaturedPost = (props) => {
 
   return (
     <section className="section feature" aria-label="feature" id="featured">
+      {router.query.category && (
+        <Head>
+          <title>{router.query.category}</title>
+        </Head>
+      )}
       <div className="container">
         <h2 className="headline headline-2 section-title">
           <span className="span">
@@ -95,7 +102,10 @@ const FeaturedPost = (props) => {
                         </div>
                       </div>
 
-                      <Link href={`/posts/${item.attributes.slug}`} className="card-btn">
+                      <Link
+                        href={`/posts/${item.attributes.slug}`}
+                        className="card-btn"
+                      >
                         Read more
                       </Link>
                     </div>
