@@ -15,7 +15,7 @@ export default function Home(props) {
   return (
     <>
       <Head>
-        <title>myforexbuddy - Perosonal Blog Website</title>
+        <title>acehealthwealth - Health and Wealth Blog Website</title>
         <meta
           name="description"
           content="Sharing knowledge is my passion. Let's venture on this journey for
