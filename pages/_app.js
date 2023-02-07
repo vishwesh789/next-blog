@@ -36,7 +36,7 @@ export default function App({ Component, pageProps }) {
         dangerouslySetInnerHTML={{
           __html: `
               window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
-              gtag('config', 'G-1X5JLCQ8LV', {page_path: window.location.pathname,});`,
+              gtag('config', 'G-TRQDM27YJT', {page_path: window.location.pathname,});`,
         }}
       />
       <Script
