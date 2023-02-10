@@ -27,7 +27,7 @@ export default function Home(props) {
           <article>
             <Layout data={props}>
               <Hero />
-              <Topics data={props} />
+              {/* <Topics data={props} /> */}
               <FeaturedPost data={props} />
               {/* <PopularTags /> */}
               {/* <RecentPosts /> */}

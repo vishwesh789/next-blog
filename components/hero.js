@@ -8,11 +8,11 @@ const Hero = () => {
           <p className="hero-subtitle">Hello Everyone!</p>
 
           <h1 className="headline headline-1 section-title">
-            I’m <span className="span">Joseph</span>
+            We are <span className="span">Family</span>
           </h1>
 
           <p className="hero-text">
-            Sharing knowledge is my passion. Let's venture on this journey for
+            Sharing knowledge is our passion. Let's venture on this journey for
             the truth together... and have some fun along the way.
           </p>
 

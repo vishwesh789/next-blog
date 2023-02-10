@@ -146,7 +146,7 @@ const Navbar = (props) => {
           </div> */}
 
             <p className="copyright-text">
-              Copyright 2022 © My Forex Buddy -Developed by Vishwesh Singh
+              Copyright 2022 © Ace health wealth -Developed by Vishwesh Singh
             </p>
           </nav>
 

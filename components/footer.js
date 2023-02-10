@@ -19,16 +19,17 @@ const Footer = () => {
               </Link>
 
               <p className="footer-text">
-                When an unknown prnoto sans took a galley and scrambled it to
-                make specimen book not only five When an unknown prnoto sans
-                took a galley and scrambled it to five centurie.
+                Copyright 2023 © Ace health wealth -Developed by Vishwesh
+                Singh.Our website's services, content, and products are provided
+                solely for educational purposes. Medical advice, diagnosis, or
+                treatment are not provided by acehealthwealth.com.
               </p>
 
               <p className="footer-list-title">Address</p>
 
               <address className="footer-text address">
-                123 Main Street <br />
-                New York, NY 10001
+                a-67, Katwariya sarai <br />
+                New Delhi, 110016
               </address>
             </div>
 

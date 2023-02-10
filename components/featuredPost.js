@@ -102,12 +102,12 @@ const FeaturedPost = (props) => {
                         </div>
                       </div>
 
-                      <Link
+                      {/* <Link
                         href={`/posts/${item.attributes.slug}`}
                         className="card-btn"
                       >
                         Read more
-                      </Link>
+                      </Link> */}
                     </div>
                   </div>
                 </div>
@@ -136,3 +136,5 @@ const FeaturedPost = (props) => {
 };
 
 export default FeaturedPost;
+
+// Health's content is for informational and educational purposes only. Our website is not intended to be a substitute for professional medical advice, diagnosis, or treatment.

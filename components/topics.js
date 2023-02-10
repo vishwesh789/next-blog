@@ -4,7 +4,6 @@ import { useEffect, useRef } from "react";
 
 const Topics = (props) => {
   const categories = props.data.categories;
-  const baseUrl = process.env.API_BASE_URL;
 
   // const slider = document.querySelector("[data-slider]");
   // const sliderContainer = document.querySelector("[data-slider-container ref={sliderContainer}]");
@@ -27,7 +26,7 @@ const Topics = (props) => {
     let currentSlidePos = 0;
 
     const moveSliderItem = function () {
-      sliderContainer.current.style.transform = `translateX(-${sliderContainer.current.children[currentSlidePos].offsetLeft}px)`;
+      sliderContainer.current.style.transform = `translateX(-${sliderContainer.current.children[currentSlidePos]?.offsetLeft}px)`;
     };
 
     /**
