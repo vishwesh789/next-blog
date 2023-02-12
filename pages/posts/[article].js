@@ -35,7 +35,7 @@ const Posts = (props) => {
           <div className="card-content">
             <div className="card-wrapper">
               <div className="card-tag">
-                {article[0].attributes.tags.map((tag,index) => {
+                {article[0].attributes.tags.map((tag, index) => {
                   return (
                     <Link href="#" className="span hover-2" key={index}>
                       #{tag}
@@ -47,7 +47,9 @@ const Posts = (props) => {
               <div className="wrapper">
                 <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
 
-                <span className="span">{article[0].attributes.readTime} mins read</span>
+                <span className="span">
+                  {article[0].attributes.readTime} mins read
+                </span>
               </div>
             </div>
             <div className="card-wrapper">
@@ -86,6 +88,23 @@ const Posts = (props) => {
                 __html: m,
               }}
             />
+            {article[0].attributes.dataSources && (
+              <div>
+                <h3>Data Sources:</h3>
+                {article[0].attributes.dataSources.map((source, index) => {
+                  return (
+                    <Link
+                      href={source}
+                      target="_blank"
+                      className="span hover-2"
+                      key={index}
+                    >
+                      {source}
+                    </Link>
+                  );
+                })}
+              </div>
+            )}
           </div>
         </div>
       </div>
