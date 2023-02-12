@@ -20,7 +20,7 @@ const FeaturedPost = (props) => {
         </Head>
       )}
       <div className="container">
-        <h2 className="headline headline-2 section-title">
+        <h2 className="headline headline-2 section-title" style={{marginTop:30}}>
           <span className="span">
             {router.query.category
               ? router.query.category.toLocaleUpperCase()
