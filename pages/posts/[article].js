@@ -98,15 +98,18 @@ const Posts = (props) => {
                       target="_blank"
                       className="span hover-2"
                       key={index}
+                      style={{marginBottom:10,marginTop:10}}
                     >
-                      {source}
+                      {source.substring(0, 40)}
                     </Link>
                   );
                 })}
               </div>
             )}
           </div>
+          
         </div>
+        
       </div>
     </Layout>
   );
