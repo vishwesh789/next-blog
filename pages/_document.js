@@ -15,6 +15,7 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap"
           rel="stylesheet"
         ></link> */}
+        <meta name="p:domain_verify" content="68df3a384f85530fc3a3b05faff1bda6"/>
       </Head>
       <body id="top">
         <Main />
