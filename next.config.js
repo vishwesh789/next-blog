@@ -15,7 +15,12 @@ const nextConfig = {
         destination: '/pinterest-68df3.html',
       },
     ]
-  }
+  },
+  experimental: {
+		amp: {
+			skipValidation: true,
+		},
+	},
 };
 
 
@@ -27,3 +32,5 @@ module.exports = (_phase, { defaultConfig }) => {
     ...nextConfig,
   });
 };
+
+
