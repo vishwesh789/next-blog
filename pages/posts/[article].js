@@ -55,7 +55,7 @@ const Posts = (props) => {
             <div className="card-wrapper">
               <div className="profile-card">
                 <Image
-                  src={article[0].attributes.img}
+                  src={"/images/author-1.png"}
                   width="48"
                   height="48"
                   loading="lazy"
