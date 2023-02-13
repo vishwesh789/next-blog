@@ -11,11 +11,12 @@ const AmpStory = () => {
       <Head>
         <title>Example AMP Story in Next.js</title>
       </Head>
+      <body>
         <amp-story
           standalone
           title="Stories in AMP - Hello World"
           publisher="AMP Project"
-          publisher-logo-src="https://amp.dev/favicons/coast-228x228.png"
+          publisher-logo-src="/images/author-1.png"
           poster-portrait-src="https://amp.dev/static/samples/img/story_dog2_portrait.jpg"
           poster-square-src="https://amp.dev/static/samples/img/story_dog2_square.jpg"
           poster-landscape-src="https://amp.dev/static/samples/img/story_dog2_landscape.jpg"
@@ -115,6 +116,7 @@ const AmpStory = () => {
             layout="nodisplay"
           />
         </amp-story>
+      </body>
     </>
   );
 };
