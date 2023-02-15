@@ -18,8 +18,7 @@ export default function Home(props) {
         <title>acehealthwealth - Health and Wealth Blog Website</title>
         <meta
           name="description"
-          content="Sharing knowledge is my passion. Let's venture on this journey for
-            the truth together... and have some fun along the way."
+          content="Our Vision is to share our knowledge related to Health and Wealth. Let us embark together on this quest for the truth... and have some fun along the way."
         />
       </Head>
       <>

@@ -4,6 +4,22 @@ import Layout from "../../components/layout";
 import qs from "qs";
 import { fetchArticles, fetchCategories } from "../../http";
 import Head from "next/head";
+import {
+  FacebookShareButton,
+  FacebookIcon,
+  PinterestShareButton,
+  PinterestIcon,
+  RedditShareButton,
+  RedditIcon,
+  WhatsappShareButton,
+  WhatsappIcon,
+  LinkedinShareButton,
+  LinkedinIcon,
+  TelegramShareButton,
+  TelegramIcon,
+  TwitterShareButton,
+  TwitterIcon,
+} from "next-share";
 
 const Posts = (props) => {
   console.log("propsssssssss in article", props.article[0].attributes);
@@ -56,6 +72,44 @@ const Posts = (props) => {
               className="img-cover"
             />
           </figure>
+
+          <div style={{ flexDirection: "row", display: "flex" }}>
+            <FacebookShareButton
+              url={`https://www.acehealthwealth.com/posts/${article[0].attributes.slug}/`}
+            >
+              <FacebookIcon size={32} round />
+            </FacebookShareButton>
+            <PinterestShareButton
+              url={`https://www.acehealthwealth.com/posts/${article[0].attributes.slug}/`}
+            >
+              <PinterestIcon size={32} round />
+            </PinterestShareButton>
+            <RedditShareButton
+              url={`https://www.acehealthwealth.com/posts/${article[0].attributes.slug}/`}
+            >
+              <RedditIcon size={32} round />
+            </RedditShareButton>
+            <WhatsappShareButton
+              url={`https://www.acehealthwealth.com/posts/${article[0].attributes.slug}/`}
+            >
+              <WhatsappIcon size={32} round />
+            </WhatsappShareButton>
+            <LinkedinShareButton
+              url={`https://www.acehealthwealth.com/posts/${article[0].attributes.slug}/`}
+            >
+              <LinkedinIcon size={32} round />
+            </LinkedinShareButton>
+            <TelegramShareButton
+              url={`https://www.acehealthwealth.com/posts/${article[0].attributes.slug}/`}
+            >
+              <TelegramIcon size={32} round />
+            </TelegramShareButton>
+            <TwitterShareButton
+              url={`https://www.acehealthwealth.com/posts/${article[0].attributes.slug}/`}
+            >
+              <TwitterIcon size={32} round />
+            </TwitterShareButton>
+          </div>
 
           <div className="card-content">
             <div className="card-wrapper">
