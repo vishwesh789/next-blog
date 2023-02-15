@@ -23,7 +23,7 @@ export default function Home(props) {
         />
       </Head>
       <>
-        <main>
+        <main className="herooooooooooooo">
           <article>
             <Layout data={props}>
               {/* <Hero /> */}
