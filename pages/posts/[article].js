@@ -15,6 +15,31 @@ const Posts = (props) => {
       <Head>
         <title>{article[0].attributes.title}</title>
         <meta name="description" content={article[0].attributes.metaDesc} />
+
+        <meta
+          property="og:url"
+          content={`https://www.acehealthwealth.com/posts/${article[0].attributes.slug}/`}
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={article[0].attributes.title} />
+        <meta
+          property="og:description"
+          content={article[0].attributes.metaDesc}
+        />
+        <meta property="og:image" content={article[0].attributes.img} />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="acehealthwealth.com" />
+        <meta
+          property="twitter:url"
+          content={`https://www.acehealthwealth.com/posts/${article[0].attributes.slug}/`}
+        />
+        <meta name="twitter:title" content={article[0].attributes.title} />
+        <meta
+          name="twitter:description"
+          content={article[0].attributes.metaDesc}
+        />
+        <meta name="twitter:image" content={article[0].attributes.img} />
       </Head>
       <div className="container" style={{ marginTop: 120 }}>
         <div className="card feature-card">
@@ -98,7 +123,7 @@ const Posts = (props) => {
                       target="_blank"
                       className="span hover-2"
                       key={index}
-                      style={{marginBottom:10,marginTop:10}}
+                      style={{ marginBottom: 10, marginTop: 10 }}
                     >
                       {source.substring(0, 40)}
                     </Link>
@@ -107,9 +132,7 @@ const Posts = (props) => {
               </div>
             )}
           </div>
-          
         </div>
-        
       </div>
     </Layout>
   );
