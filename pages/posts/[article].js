@@ -68,7 +68,7 @@ const Posts = (props) => {
               width="1602"
               height="903"
               loading="lazy"
-              alt="Self-observation is the first step of inner unfolding"
+              alt={article[0].attributes.title}
               className="img-cover"
             />
           </figure>
@@ -152,9 +152,7 @@ const Posts = (props) => {
               </div>
             </div>
             <h1 className="headline headline-3">
-              <Link href="#" className="card-title hover-2">
                 {article[0].attributes.title}
-              </Link>
             </h1>
             <div
               style={{
