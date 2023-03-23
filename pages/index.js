@@ -80,6 +80,7 @@ export async function getStaticProps({ query }) {
       articles: {
         item: articles.data.data,
         pagination: articles.data.meta.pagination,
+        parentPath:"posts"
       },
     },
   };

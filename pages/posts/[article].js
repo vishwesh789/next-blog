@@ -22,7 +22,7 @@ import {
 } from "next-share";
 
 const Posts = (props) => {
-  console.log("propsssssssss in article", props.article[0].attributes);
+  // console.log("propsssssssss in article", props.article[0].attributes);
   const article = props.article;
   const m = article[0].attributes.body.content;
 
@@ -73,7 +73,7 @@ const Posts = (props) => {
             />
           </figure>
 
-          <div style={{ flexDirection: "row", display: "flex" }}>
+          <div style={{ flexDirection: "row", display: "flex", gap:5 }}>
             <FacebookShareButton
               url={`https://www.acehealthwealth.com/posts/${article[0].attributes.slug}/`}
             >

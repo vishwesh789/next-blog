@@ -1,6 +1,6 @@
 import FeaturedPost from "../../components/featuredPost";
 import qs from "qs";
-import { fetchArticles, fetchCategories } from "../../http";
+import { fetchArticles, fetchCarrers, fetchCategories } from "../../http";
 import Layout from "../../components/layout";
 
 const Category = (props) => {
@@ -74,6 +74,29 @@ export async function getStaticProps(context) {
   );
 
   const articlesCategoryWise = await fetchArticles(artQueryWithFilter);
+
+  const careerQueryWithFilter = qs.stringify(
+    {
+      populate: {
+        category: true,
+        image: true,
+        author: true,
+      },
+      filters: {
+        category: {
+          slug: { $eq: context.params.category },
+        },
+      },
+    },
+    {
+      encodeValuesOnly: true,
+    }
+  );
+
+  const careersCategoryWise = await fetchCarrers(careerQueryWithFilter);
+
+
+  
   const artQuery = qs.stringify(
     {
       populate: {
@@ -98,10 +121,17 @@ export async function getStaticProps(context) {
       articlesCatWise: {
         item: articlesCategoryWise.data.data,
         pagination: articlesCategoryWise.data.meta.pagination,
+        parentPath:"posts"
+      },
+      careersCatWise: {
+        item: careersCategoryWise.data.data,
+        pagination: careersCategoryWise.data.meta.pagination,
+        parentPath:"careers"
       },
       articles: {
         item: articles.data.data,
         pagination: articles.data.meta.pagination,
+        parentPath:"posts"
       },
     },
   };
