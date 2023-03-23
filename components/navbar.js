@@ -43,8 +43,8 @@ const Navbar = (props) => {
           <Link href="/" className="logo">
             <Image
               src="/images/healthWealthLogo.png"
-              width="110"
-              height="32"
+              width="80"
+              height="25"
               alt="aceHealthWealthLogo"
             />
           </Link>
@@ -54,8 +54,8 @@ const Navbar = (props) => {
               <Link href="/" className="logo">
               <Image
               src="/images/healthWealthLogo.png"
-              width="119"
-              height="37"
+              width="80"
+              height="25"
               alt="aceHealthWealthLogo"
             />
               </Link>
