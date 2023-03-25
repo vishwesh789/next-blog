@@ -45,7 +45,7 @@ const Navbar = (props) => {
               src="/images/healthWealthLogo.png"
               width="80"
               height="25"
-              alt="aceHealthWealthLogo"
+              alt="aceHealthWealth"
             />
           </Link>
 
@@ -56,7 +56,7 @@ const Navbar = (props) => {
               src="/images/healthWealthLogo.png"
               width="80"
               height="25"
-              alt="aceHealthWealthLogo"
+              alt="aceHealthWealth"
             />
               </Link>
 
