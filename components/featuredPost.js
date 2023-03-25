@@ -112,18 +112,11 @@ console.log("queryyyyyyyyyy",router)
 
                     <div className="card-wrapper">
                       <div className="profile-card">
-                        <Image
-                          src="/images/author-1.png"
-                          width="48"
-                          height="48"
-                          loading="lazy"
-                          alt="Joseph"
-                          className="profile-banner"
-                        />
+                       
 
                         <div>
                           <p className="card-title">
-                            {item.attributes.author.data.attributes.username}
+                           By: {item.attributes.author.data.attributes.username}
                           </p>
 
                           {/* <p className="card-subtitle">25 Nov 2022</p> */}

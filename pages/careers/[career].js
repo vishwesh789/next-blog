@@ -73,7 +73,7 @@ const Careers = (props) => {
             />
           </figure>
 
-          <div style={{ flexDirection: "row", display: "flex", gap:5}}>
+          <div style={{ flexDirection: "row", display: "flex", gap: 5 }}>
             <FacebookShareButton
               url={`https://www.acehealthwealth.com/careers/${career[0].attributes.slug}/`}
             >
@@ -133,28 +133,25 @@ const Careers = (props) => {
             </div>
             <div className="card-wrapper">
               <div className="profile-card">
-                <Image
-                  src={"/images/author-1.png"}
-                  width="48"
-                  height="48"
-                  loading="lazy"
-                  alt="Joseph"
-                  className="profile-banner"
-                />
-
                 <div>
                   <p className="card-title">
-                    {career[0].attributes.author.data.attributes.username}
+                   By: {career[0].attributes.author.data.attributes.username}
                   </p>
 
                   {/* <p className="card-subtitle">25 Nov 2022</p> */}
                 </div>
               </div>
             </div>
-            <h1 className="headline headline-3">
+            <h1
+              className="headline headline-3"
+              style={{
+                fontSize: 30,
+              }}
+            >
               {career[0].attributes.title}
             </h1>
             <div
+              className="content2"
               style={{
                 marginTop: 30,
                 wordSpacing: 3,
