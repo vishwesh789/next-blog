@@ -80,7 +80,7 @@ export async function getStaticProps({ query }) {
       careers: {
         item: careers.data.data,
         pagination: careers.data.meta.pagination,
-        parentPath:"posts"
+        parentPath:"careers"
       },
     },
   };
