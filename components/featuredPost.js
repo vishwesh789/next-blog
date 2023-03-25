@@ -15,20 +15,20 @@ console.log("queryyyyyyyyyy",router)
   let parentPath
       switch (router.query.category) {
         case "articles":
+          articles = props.data.careers.item;
+          parentPath =props.data.careers.parentPath
+          break;
+        case "health":
           articles = props.data.articles.item;
           parentPath =props.data.articles.parentPath
           break;
-        case "lifestyle":
-          articles = props.data.articlesCatWise.item;
-          parentPath =props.data.articlesCatWise.parentPath
-          break;
         case "career":
-          articles = props.data.careersCatWise.item;
-          parentPath =props.data.careersCatWise.parentPath
+          articles = props.data.careers.item;
+          parentPath =props.data.careers.parentPath
           break;
           default:
-          articles = props.data.articles.item
-          parentPath =props.data.articles.parentPath
+          articles = props.data.careers.item
+          parentPath =props.data.careers.parentPath
       
       }
   
@@ -144,7 +144,7 @@ console.log("queryyyyyyyyyy",router)
           })}
         </ul>
 
-        <Link href={`/category/articles`} className="btn btn-secondary">
+        <Link href={`/category/health`} className="btn btn-secondary">
           <span className="span">Show More Posts</span>
 
           <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>

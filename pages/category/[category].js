@@ -24,7 +24,7 @@ export async function getStaticPaths() {
   );
   const slugs = await fetchCategories(query);
 
-  const pathArray = [{ params: { category: "articles" } }];
+  const pathArray = [];
 
   slugs.data.data.forEach(myFunction);
 
@@ -55,46 +55,7 @@ export async function getStaticProps(context) {
 
   const categories = await fetchCategories(catQuery);
 
-  const artQueryWithFilter = qs.stringify(
-    {
-      populate: {
-        category: true,
-        image: true,
-        author: true,
-      },
-      filters: {
-        category: {
-          slug: { $eq: context.params.category },
-        },
-      },
-    },
-    {
-      encodeValuesOnly: true,
-    }
-  );
-
-  const articlesCategoryWise = await fetchArticles(artQueryWithFilter);
-
-  const careerQueryWithFilter = qs.stringify(
-    {
-      populate: {
-        category: true,
-        image: true,
-        author: true,
-      },
-      filters: {
-        category: {
-          slug: { $eq: context.params.category },
-        },
-      },
-    },
-    {
-      encodeValuesOnly: true,
-    }
-  );
-
-  const careersCategoryWise = await fetchCarrers(careerQueryWithFilter);
-
+  
 
   
   const artQuery = qs.stringify(
@@ -112,26 +73,36 @@ export async function getStaticProps(context) {
 
   const articles = await fetchArticles(artQuery);
 
+  const careerQuery = qs.stringify(
+    {
+      populate: {
+        category: true,
+        image: true,
+        author: true,
+      },
+    },
+    {
+      encodeValuesOnly: true,
+    }
+  );
+
+  const careers = await fetchCarrers(careerQuery);
+
   //   console.log(articles.data.data,query);
 
   // Pass data to the page via props
   return {
     props: {
       categories: categories.data.data,
-      articlesCatWise: {
-        item: articlesCategoryWise.data.data,
-        pagination: articlesCategoryWise.data.meta.pagination,
-        parentPath:"posts"
-      },
-      careersCatWise: {
-        item: careersCategoryWise.data.data,
-        pagination: careersCategoryWise.data.meta.pagination,
-        parentPath:"careers"
-      },
       articles: {
         item: articles.data.data,
         pagination: articles.data.meta.pagination,
         parentPath:"posts"
+      },
+      careers: {
+        item: careers.data.data,
+        pagination: careers.data.meta.pagination,
+        parentPath:"careers"
       },
     },
   };
