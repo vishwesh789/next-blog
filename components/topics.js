@@ -87,7 +87,12 @@ const Topics = (props) => {
   }, []);
 
   return (
-    <section className="topics" id="topics" aria-labelledby="topic-label" style={{marginTop:100}}>
+    <section
+      className="topics"
+      id="topics"
+      aria-labelledby="topic-label"
+      style={{ marginTop: 100 }}
+    >
       <div className="container">
         <div className="card topic-card">
           <div className="card-content">
@@ -99,8 +104,8 @@ const Topics = (props) => {
             </h2>
 
             <p className="card-text">
-              Don't miss out on the latest news about Travel tips, Hotels
-              review, Food guide...
+              Don't miss out on the latest news about Health tips, Finance,
+              Career guide...
             </p>
 
             <div className="btn-group">
