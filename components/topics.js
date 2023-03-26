@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 
 const Topics = (props) => {
   const categories = props.data.categories;
+  // console.log("categoriessssssssss", categories);
 
   // const slider = document.querySelector("[data-slider]");
   // const sliderContainer = document.querySelector("[data-slider-container ref={sliderContainer}]");
@@ -86,7 +87,7 @@ const Topics = (props) => {
   }, []);
 
   return (
-    <section className="topics" id="topics" aria-labelledby="topic-label">
+    <section className="topics" id="topics" aria-labelledby="topic-label" style={{marginTop:100}}>
       <div className="container">
         <div className="card topic-card">
           <div className="card-content">
@@ -130,6 +131,22 @@ const Topics = (props) => {
               ref={sliderContainer}
             >
               {categories?.map((item) => {
+                let count;
+                switch (item.attributes.title) {
+                  case "Health":
+                    count = item.attributes.articles.data.length;
+                    break;
+                  case "Career":
+                    count = item.attributes.careers.data.length;
+
+                    break;
+                  case "Technology":
+                    count = item.attributes.technologies.data.length;
+                    break;
+                  default:
+                    count = 10;
+                }
+
                 return (
                   <li className="slider-item" key={item.id}>
                     <Link
@@ -155,9 +172,7 @@ const Topics = (props) => {
                           {item.attributes.title}
                         </span>
 
-                        <p className="slider-subtitle">
-                          {item.attributes.articles.data.length} Articles
-                        </p>
+                        <p className="slider-subtitle">{count} Articles</p>
                       </div>
                     </Link>
                   </li>

@@ -1,6 +1,6 @@
 import FeaturedPost from "../../components/featuredPost";
 import qs from "qs";
-import { fetchArticles, fetchCarrers, fetchCategories } from "../../http";
+import { fetchArticles, fetchCarrers, fetchCategories, fetchTechnologies } from "../../http";
 import Layout from "../../components/layout";
 
 const Category = (props) => {
@@ -88,6 +88,22 @@ export async function getStaticProps(context) {
 
   const careers = await fetchCarrers(careerQuery);
 
+  const technologyQuery = qs.stringify(
+    {
+      populate: {
+        category: true,
+        image: true,
+        author: true,
+      },
+    },
+    {
+      encodeValuesOnly: true,
+    }
+  );
+
+  const technologies = await fetchTechnologies(technologyQuery);
+
+
   //   console.log(articles.data.data,query);
 
   // Pass data to the page via props
@@ -103,6 +119,11 @@ export async function getStaticProps(context) {
         item: careers.data.data,
         pagination: careers.data.meta.pagination,
         parentPath:"careers"
+      },
+      technologies: {
+        item: technologies.data.data,
+        pagination: technologies.data.meta.pagination,
+        parentPath:"technologies"
       },
     },
   };

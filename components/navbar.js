@@ -12,7 +12,7 @@ const Navbar = (props) => {
   const backTopBtn = useRef();
 
   const toggleNav = () => {
-    console.log("navtogglersss", navTogglers.current);
+    // console.log("navtogglersss", navTogglers.current);
     navbar.current.classList.toggle("active");
     document.body.classList.toggle("nav-active");
   };

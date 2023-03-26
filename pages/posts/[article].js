@@ -153,6 +153,7 @@ const Posts = (props) => {
               {article[0].attributes.title}
             </h1>
             <div
+              className="content"
               style={{
                 marginTop: 30,
                 wordSpacing: 3,

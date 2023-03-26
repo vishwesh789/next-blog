@@ -26,7 +26,7 @@ export default function Home(props) {
           <article>
             <Layout data={props}>
               {/* <Hero /> */}
-              {/* <Topics data={props} /> */}
+              <Topics data={props} />
               <FeaturedPost data={props} />
               {/* <PopularTags /> */}
               {/* <RecentPosts /> */}
@@ -45,6 +45,8 @@ export async function getStaticProps({ query }) {
     {
       populate: {
         articles: true,
+        careers: true,
+        technologies:true,
         image: true,
       },
     },

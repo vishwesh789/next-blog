@@ -5,7 +5,7 @@ import Head from "next/head";
 
 const FeaturedPost = (props) => {
   const router = useRouter();
-console.log("queryyyyyyyyyy",router)
+// console.log("queryyyyyyyyyy",router)
   // const articles =
   //   !router.query.category || router.query.category == ("articles" || undefined)
   //     ? props.data.articles.item
@@ -26,6 +26,10 @@ console.log("queryyyyyyyyyy",router)
           articles = props.data.careers.item;
           parentPath =props.data.careers.parentPath
           break;
+          case "technology":
+            articles = props.data.technologies.item;
+            parentPath =props.data.technologies.parentPath
+            break;
           default:
           articles = props.data.careers.item
           parentPath =props.data.careers.parentPath

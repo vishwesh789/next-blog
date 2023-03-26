@@ -151,7 +151,7 @@ const Careers = (props) => {
               {career[0].attributes.title}
             </h1>
             <div
-              className="content2"
+              className="content"
               style={{
                 marginTop: 30,
                 wordSpacing: 3,
