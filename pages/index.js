@@ -46,7 +46,8 @@ export async function getStaticProps({ query }) {
       populate: {
         articles: true,
         careers: true,
-        technologies:true,
+        technologies: true,
+        lifestyles:true,
         image: true,
       },
     },

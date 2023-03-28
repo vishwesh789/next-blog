@@ -148,6 +148,9 @@ const Topics = (props) => {
                   case "Technology":
                     count = item.attributes.technologies.data.length;
                     break;
+                    case "Lifestyle":
+                      count = item.attributes.lifestyles.data.length;
+                      break;
                   default:
                     count = 10;
                 }

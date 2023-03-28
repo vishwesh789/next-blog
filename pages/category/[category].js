@@ -1,6 +1,6 @@
 import FeaturedPost from "../../components/featuredPost";
 import qs from "qs";
-import { fetchArticles, fetchCarrers, fetchCategories, fetchTechnologies } from "../../http";
+import { fetchArticles, fetchCarrers, fetchCategories, fetchLifestyles, fetchTechnologies } from "../../http";
 import Layout from "../../components/layout";
 
 const Category = (props) => {
@@ -103,6 +103,21 @@ export async function getStaticProps(context) {
 
   const technologies = await fetchTechnologies(technologyQuery);
 
+  const lifestyleQuery = qs.stringify(
+    {
+      populate: {
+        category: true,
+        image: true,
+        author: true,
+      },
+    },
+    {
+      encodeValuesOnly: true,
+    }
+  );
+
+  const lifestyles = await fetchLifestyles(lifestyleQuery);
+
 
   //   console.log(articles.data.data,query);
 
@@ -124,6 +139,11 @@ export async function getStaticProps(context) {
         item: technologies.data.data,
         pagination: technologies.data.meta.pagination,
         parentPath:"technologies"
+      },
+      lifestyles: {
+        item: lifestyles.data.data,
+        pagination: lifestyles.data.meta.pagination,
+        parentPath:"lifestyles"
       },
     },
   };
