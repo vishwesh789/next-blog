@@ -216,20 +216,20 @@ export async function getStaticProps(context) {
   // Fetch data from external API
   console.log("contexttttt", context);
 
-  const catQuery = qs.stringify(
-    {
-      populate: {
-        careers: true,
-        articles: true,
-        image: true,
-      },
-    },
-    {
-      encodeValuesOnly: true,
-    }
-  );
+  // const catQuery = qs.stringify(
+  //   {
+  //     populate: {
+  //       careers: true,
+  //       articles: true,
+  //       image: true,
+  //     },
+  //   },
+  //   {
+  //     encodeValuesOnly: true,
+  //   }
+  // );
 
-  const categories = await fetchCategories(catQuery);
+  // const categories = await fetchCategories(catQuery);
 
   const carrerQueryWithFilter = qs.stringify(
     {
@@ -255,7 +255,7 @@ export async function getStaticProps(context) {
   // Pass data to the page via props
   return {
     props: {
-      categories: categories.data.data,
+      // categories: categories.data.data,
       career: career.data.data,
     },
   };

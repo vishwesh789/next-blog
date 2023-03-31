@@ -8,14 +8,7 @@ const nextConfig = {
     domains: ["localhost", "api.myforexbuddy.com", "images.unsplash.com"],
   },
   swcMinify: true,
-  async rewrites() {
-    return [
-      {
-        source: '/',
-        destination: '/pinterest-68df3.html',
-      },
-    ]
-  }
+  
 };
 
 
