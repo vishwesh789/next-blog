@@ -3,13 +3,8 @@ import Link from "next/link";
 import { useEffect, useRef } from "react";
 
 const Topics = (props) => {
-  const categories = props.data.categories;
+  // const categories = props.data.categories;
   // console.log("categoriessssssssss", categories);
-
-  // const slider = document.querySelector("[data-slider]");
-  // const sliderContainer = document.querySelector("[data-slider-container ref={sliderContainer}]");
-  // const sliderPrevBtn = document.querySelector("[data-slider-prev]");
-  // const sliderNextBtn = document.querySelector("[data-slider-next ref= {sliderNextBtn}]");
 
   const slider = useRef();
   const sliderPrevBtn = useRef();
@@ -135,7 +130,7 @@ const Topics = (props) => {
               data-slider-container
               ref={sliderContainer}
             >
-              {categories?.map((item) => {
+              {/* {categories?.map((item) => {
                 let count;
                 switch (item.attributes.title) {
                   case "Health":
@@ -148,15 +143,15 @@ const Topics = (props) => {
                   case "Technology":
                     count = item.attributes.technologies.data.length;
                     break;
-                    case "Lifestyle":
-                      count = item.attributes.lifestyles.data.length;
-                      break;
+                  case "Lifestyle":
+                    count = item.attributes.lifestyles.data.length;
+                    break;
                   default:
                     count = 10;
                 }
 
                 return (
-                  <li className="slider-item" key={item.id}>
+                  <li className="s>
                     <Link
                       href={`/category/${item.attributes.slug}`}
                       className="slider-card"
@@ -185,7 +180,108 @@ const Topics = (props) => {
                     </Link>
                   </li>
                 );
-              })}
+              })} */}
+              <li className="slider-item">
+                <Link href={`/category/lifestyle`} className="slider-card">
+                  <figure
+                    className="slider-banner img-holder"
+                    style={{ "--width": 507, "--height": 618 }}
+                  >
+                    <Image
+                      src={
+                        "https://images.pexels.com/photos/1034940/pexels-photo-1034940.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                      }
+                      width="507"
+                      height="618"
+                      loading="lazy"
+                      alt="Sport"
+                      className="img-cover"
+                    />
+                  </figure>
+
+                  <div className="slider-content">
+                    <span className="slider-title">Lifestyle</span>
+
+                    <p className="slider-subtitle">15 Articles</p>
+                  </div>
+                </Link>
+              </li>
+              <li className="slider-item" >
+                <Link href={`/category/health`} className="slider-card">
+                  <figure
+                    className="slider-banner img-holder"
+                    style={{ "--width": 507, "--height": 618 }}
+                  >
+                    <Image
+                      src={
+                        "https://images.freeimages.com/variants/r1kHNRt2vrPm4NK9McWGVTeZ/f4a36f6589a0e50e702740b15352bc00e4bfaf6f58bd4db850e167794d05993d"
+                      }
+                      width="507"
+                      height="618"
+                      loading="lazy"
+                      alt="Sport"
+                      className="img-cover"
+                    />
+                  </figure>
+
+                  <div className="slider-content">
+                    <span className="slider-title">Health</span>
+
+                    <p className="slider-subtitle">70 Articles</p>
+                  </div>
+                </Link>
+              </li>
+
+              <li className="slider-item">
+                <Link href={`/category/technology`} className="slider-card">
+                  <figure
+                    className="slider-banner img-holder"
+                    style={{ "--width": 507, "--height": 618 }}
+                  >
+                    <Image
+                      src={
+                        "https://images.pexels.com/photos/1181317/pexels-photo-1181317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                      }
+                      width="507"
+                      height="618"
+                      loading="lazy"
+                      alt="Sport"
+                      className="img-cover"
+                    />
+                  </figure>
+
+                  <div className="slider-content">
+                    <span className="slider-title">Technology</span>
+
+                    <p className="slider-subtitle">10 Articles</p>
+                  </div>
+                </Link>
+              </li>
+              <li className="slider-item">
+                <Link href={`/category/career`} className="slider-card">
+                  <figure
+                    className="slider-banner img-holder"
+                    style={{ "--width": 507, "--height": 618 }}
+                  >
+                    <Image
+                      src={
+                        "https://images.pexels.com/photos/601170/pexels-photo-601170.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                      }
+                      width="507"
+                      height="618"
+                      loading="lazy"
+                      alt="Sport"
+                      className="img-cover"
+                    />
+                  </figure>
+
+                  <div className="slider-content">
+                    <span className="slider-title">Career</span>
+
+                    <p className="slider-subtitle">30 Articles</p>
+                  </div>
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

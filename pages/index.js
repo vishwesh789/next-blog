@@ -41,22 +41,22 @@ export default function Home(props) {
 export async function getStaticProps({ query }) {
   // Fetch data from external API
 
-  const catQuery = qs.stringify(
-    {
-      populate: {
-        articles: true,
-        careers: true,
-        technologies: true,
-        lifestyles:true,
-        image: true,
-      },
-    },
-    {
-      encodeValuesOnly: true,
-    }
-  );
+  // const catQuery = qs.stringify(
+  //   {
+  //     populate: {
+  //       articles: true,
+  //       careers: true,
+  //       technologies: true,
+  //       lifestyles:true,
+  //       image: true,
+  //     },
+  //   },
+  //   {
+  //     encodeValuesOnly: true,
+  //   }
+  // );
 
-  const categories = await fetchCategories(catQuery);
+  // const categories = await fetchCategories(catQuery);
 
   
 
@@ -79,7 +79,7 @@ export async function getStaticProps({ query }) {
   // Pass data to the page via props
   return {
     props: {
-      categories: categories.data.data,
+      // categories: categories.data.data,
       careers: {
         item: careers.data.data,
         pagination: careers.data.meta.pagination,
