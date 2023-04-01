@@ -1,7 +1,4 @@
 import Head from "next/head";
-import { fetchArticles, fetchCategories } from "../../http";
-import qs from "qs";
-import Layout from "../../components/layout";
 
 export const config = { amp: true };
 
@@ -123,49 +120,4 @@ const AmpStory = () => {
 
 export default AmpStory;
 
-export async function getStaticProps({ query }) {
-  // Fetch data from external API
-  console.log("querrryyyyyyyyyy  index", query);
 
-  const catQuery = qs.stringify(
-    {
-      populate: {
-        articles: true,
-        image: true,
-      },
-    },
-    {
-      encodeValuesOnly: true,
-    }
-  );
-
-  const categories = await fetchCategories(catQuery);
-
-  const artQuery = qs.stringify(
-    {
-      populate: {
-        category: true,
-        image: true,
-        author: true,
-      },
-    },
-    {
-      encodeValuesOnly: true,
-    }
-  );
-
-  const articles = await fetchArticles(artQuery);
-
-  console.log("paginationnnnnnnnnnnnnnn", articles.data.data);
-
-  // Pass data to the page via props
-  return {
-    props: {
-      categories: categories.data.data,
-      articles: {
-        item: articles.data.data,
-        pagination: articles.data.meta.pagination,
-      },
-    },
-  };
-}

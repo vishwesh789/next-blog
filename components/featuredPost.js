@@ -3,14 +3,47 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import Head from "next/head";
 
-
 const FeaturedPost = (props) => {
   const router = useRouter();
-
-  const articles =
-    !router.query.category || router.query.category == ("articles" || undefined)
-      ? props.data.articles.item
-      : props.data.articlesCatWise.item;
+// console.log("queryyyyyyyyyy",router)
+  // const articles =
+  //   !router.query.category || router.query.category == ("articles" || undefined)
+  //     ? props.data.articles.item
+  //     : props.data.articlesCatWise.item;
+  
+  let articles;
+  let parentPath
+      switch (router.query.category) {
+        case "articles":
+          articles = props.data.careers.item;
+          parentPath =props.data.careers.parentPath
+          break;
+        case "health":
+          articles = props.data.articles.item;
+          parentPath =props.data.articles.parentPath
+          break;
+        case "career":
+          articles = props.data.careers.item;
+          parentPath =props.data.careers.parentPath
+          break;
+          case "technology":
+            articles = props.data.technologies.item;
+            parentPath =props.data.technologies.parentPath
+          break;
+          case "lifestyle":
+            articles = props.data.lifestyles.item;
+            parentPath =props.data.lifestyles.parentPath
+            break;
+          default:
+          articles = props.data.careers.item
+          parentPath =props.data.careers.parentPath
+      
+      }
+  
+  
+  
+  
+  
 
   return (
     <section className="section feature" aria-label="feature" id="featured">
@@ -20,7 +53,10 @@ const FeaturedPost = (props) => {
         </Head>
       )}
       <div className="container">
-        <h2 className="headline headline-2 section-title" style={{marginTop:30}}>
+        <h2
+          className="headline headline-2 section-title"
+          style={{ marginTop: 30 }}
+        >
           <span className="span">
             {router.query.category
               ? router.query.category.toLocaleUpperCase()
@@ -44,7 +80,7 @@ const FeaturedPost = (props) => {
                       width="1602"
                       height="903"
                       loading="lazy"
-                      alt="Self-observation is the first step of inner unfolding"
+                      alt={item.attributes.title}
                       className="img-cover"
                     />
                   </figure>
@@ -75,7 +111,7 @@ const FeaturedPost = (props) => {
 
                     <h3 className="headline headline-3">
                       <Link
-                        href={`/posts/${item.attributes.slug}`}
+                        href={`/${parentPath}/${item.attributes.slug}`}
                         className="card-title hover-2"
                       >
                         {item.attributes.title}
@@ -84,18 +120,11 @@ const FeaturedPost = (props) => {
 
                     <div className="card-wrapper">
                       <div className="profile-card">
-                        <Image
-                          src="/images/author-1.png"
-                          width="48"
-                          height="48"
-                          loading="lazy"
-                          alt="Joseph"
-                          className="profile-banner"
-                        />
+                       
 
                         <div>
                           <p className="card-title">
-                            {item.attributes.author.data.attributes.username}
+                           By: {item.attributes.author.data.attributes.username}
                           </p>
 
                           {/* <p className="card-subtitle">25 Nov 2022</p> */}
@@ -116,7 +145,7 @@ const FeaturedPost = (props) => {
           })}
         </ul>
 
-        <Link href={`/category/articles`} className="btn btn-secondary">
+        <Link href={`/category/health`} className="btn btn-secondary">
           <span className="span">Show More Posts</span>
 
           <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>

@@ -10,11 +10,11 @@ const Footer = () => {
             <div className="footer-brand">
               <Link href="#" className="logo">
                 <Image
-                  src="/images/logo.svg"
-                  width="119"
-                  height="37"
+                  src="/images/healthWealthLogo.png"
+                  width="80"
+                  height="25"
                   loading="lazy"
-                  alt="Wren logo"
+                  alt="aceHealthWealth"
                 />
               </Link>
 
@@ -152,8 +152,8 @@ const Footer = () => {
               </Link>
             </div>
           </div>
-          <div style={{textAlign:'center',marginBottom:30}}>
-            <h4 style={{marginBottom:20}}>MEDICAL DISCLAIMER</h4>
+          <div style={{ textAlign: "center", marginBottom: 30 }}>
+            <p style={{ marginBottom: 20, fontWeight:'bold',fontSize:18 }}>MEDICAL DISCLAIMER</p>
             <p style={{ fontSize: 14 }}>
               This content is provided solely for informational and educational
               purposes. It is not intended to give medical advice or to

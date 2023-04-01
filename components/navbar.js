@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 
-const Navbar = (props) => {
+const Navbar = () => {
   const navbar = useRef();
 
   const navTogglers = useRef(null);
@@ -12,7 +12,7 @@ const Navbar = (props) => {
   const backTopBtn = useRef();
 
   const toggleNav = () => {
-    console.log("navtogglersss", navTogglers.current);
+    // console.log("navtogglersss", navTogglers.current);
     navbar.current.classList.toggle("active");
     document.body.classList.toggle("nav-active");
   };
@@ -35,17 +35,17 @@ const Navbar = (props) => {
     }
   };
 
-  const categories = props.data.categories;
+  // const categories = props.data.categories;
   return (
     <div>
       <header className="header" data-header id="top" ref={header}>
         <div className="container">
           <Link href="/" className="logo">
             <Image
-              src="/images/logo.svg"
-              width="119"
-              height="37"
-              alt="Wren logo"
+              src="/images/healthWealthLogo.png"
+              width="80"
+              height="25"
+              alt="aceHealthWealth"
             />
           </Link>
 
@@ -53,10 +53,10 @@ const Navbar = (props) => {
             <div className="navbar-top">
               <Link href="/" className="logo">
                 <Image
-                  src="/images/logo.svg"
-                  width="119"
-                  height="37"
-                  alt="Wren logo"
+                  src="/images/healthWealthLogo.png"
+                  width="80"
+                  height="25"
+                  alt="aceHealthWealth"
                 />
               </Link>
 
@@ -72,7 +72,7 @@ const Navbar = (props) => {
             </div>
 
             <ul className="navbar-list">
-              {categories?.map((item, idx) => {
+              {/* {categories?.map((item, idx) => {
                 return (
                   <li key={item.id}>
                     <Link
@@ -86,7 +86,51 @@ const Navbar = (props) => {
                     </Link>
                   </li>
                 );
-              })}
+              })} */}
+              <li>
+                <Link
+                  href={"/category/health"}
+                  className="navbar-link hover-1"
+                  data-nav-toggler
+                  ref={navTogglers}
+                  onClick={toggleNav}
+                >
+                  Health
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={"/category/career"}
+                  className="navbar-link hover-1"
+                  data-nav-toggler
+                  ref={navTogglers}
+                  onClick={toggleNav}
+                >
+                  Career
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={"/category/technology"}
+                  className="navbar-link hover-1"
+                  data-nav-toggler
+                  ref={navTogglers}
+                  onClick={toggleNav}
+                >
+                  Technology
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={"/category/lifestyle"}
+                  className="navbar-link hover-1"
+                  data-nav-toggler
+                  ref={navTogglers}
+                  onClick={toggleNav}
+                >
+                  Lifestyle
+                </Link>
+              </li>
             </ul>
 
             {/* <div className="navbar-bottom">
@@ -145,7 +189,7 @@ const Navbar = (props) => {
             </ul>
           </div> */}
 
-            <p className="copyright-text">
+            <p className="copyright-text" style={{marginTop:20}}>
               Copyright 2022 © Ace health wealth -Developed by Vishwesh Singh
             </p>
           </nav>

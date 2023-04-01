@@ -1,6 +1,6 @@
 import FeaturedPost from "../../components/featuredPost";
 import qs from "qs";
-import { fetchArticles, fetchCategories } from "../../http";
+import { fetchArticles, fetchCarrers, fetchCategories, fetchLifestyles, fetchTechnologies } from "../../http";
 import Layout from "../../components/layout";
 
 const Category = (props) => {
@@ -24,7 +24,7 @@ export async function getStaticPaths() {
   );
   const slugs = await fetchCategories(query);
 
-  const pathArray = [{ params: { category: "articles" } }];
+  const pathArray = [];
 
   slugs.data.data.forEach(myFunction);
 
@@ -41,39 +41,23 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   // Fetch data from external API
 
-  const catQuery = qs.stringify(
-    {
-      populate: {
-        articles: true,
-        image: true,
-      },
-    },
-    {
-      encodeValuesOnly: true,
-    }
-  );
+  // const catQuery = qs.stringify(
+  //   {
+  //     populate: {
+  //       articles: true,
+  //       image: true,
+  //     },
+  //   },
+  //   {
+  //     encodeValuesOnly: true,
+  //   }
+  // );
 
-  const categories = await fetchCategories(catQuery);
+  // const categories = await fetchCategories(catQuery);
 
-  const artQueryWithFilter = qs.stringify(
-    {
-      populate: {
-        category: true,
-        image: true,
-        author: true,
-      },
-      filters: {
-        category: {
-          slug: { $eq: context.params.category },
-        },
-      },
-    },
-    {
-      encodeValuesOnly: true,
-    }
-  );
+  
 
-  const articlesCategoryWise = await fetchArticles(artQueryWithFilter);
+  
   const artQuery = qs.stringify(
     {
       populate: {
@@ -89,19 +73,77 @@ export async function getStaticProps(context) {
 
   const articles = await fetchArticles(artQuery);
 
+  const careerQuery = qs.stringify(
+    {
+      populate: {
+        category: true,
+        image: true,
+        author: true,
+      },
+    },
+    {
+      encodeValuesOnly: true,
+    }
+  );
+
+  const careers = await fetchCarrers(careerQuery);
+
+  const technologyQuery = qs.stringify(
+    {
+      populate: {
+        category: true,
+        image: true,
+        author: true,
+      },
+    },
+    {
+      encodeValuesOnly: true,
+    }
+  );
+
+  const technologies = await fetchTechnologies(technologyQuery);
+
+  const lifestyleQuery = qs.stringify(
+    {
+      populate: {
+        category: true,
+        image: true,
+        author: true,
+      },
+    },
+    {
+      encodeValuesOnly: true,
+    }
+  );
+
+  const lifestyles = await fetchLifestyles(lifestyleQuery);
+
+
   //   console.log(articles.data.data,query);
 
   // Pass data to the page via props
   return {
     props: {
-      categories: categories.data.data,
-      articlesCatWise: {
-        item: articlesCategoryWise.data.data,
-        pagination: articlesCategoryWise.data.meta.pagination,
-      },
+      // categories: categories.data.data,
       articles: {
         item: articles.data.data,
         pagination: articles.data.meta.pagination,
+        parentPath:"posts"
+      },
+      careers: {
+        item: careers.data.data,
+        pagination: careers.data.meta.pagination,
+        parentPath:"careers"
+      },
+      technologies: {
+        item: technologies.data.data,
+        pagination: technologies.data.meta.pagination,
+        parentPath:"technologies"
+      },
+      lifestyles: {
+        item: lifestyles.data.data,
+        pagination: lifestyles.data.meta.pagination,
+        parentPath:"lifestyles"
       },
     },
   };

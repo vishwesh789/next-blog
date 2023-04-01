@@ -718,6 +718,19 @@ body.nav-active {
   margin-block-start: 30px;
 }
 
+.content strong{
+  color: #BCA136;
+}
+
+.content h2{
+  font-size: 2.2rem;
+  color: #829356;
+}
+
+.content a strong{
+  color: #1D741B;
+}
+
 /*-----------------------------------*\
     #POPULAR TAGS
   \*-----------------------------------*/
