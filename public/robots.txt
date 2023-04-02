@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.acehealthwealth.com
+
+# Sitemaps
+Sitemap: https://www.acehealthwealth.com/sitemap.xml
