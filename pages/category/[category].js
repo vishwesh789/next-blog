@@ -1,6 +1,13 @@
 import FeaturedPost from "../../components/featuredPost";
 import qs from "qs";
-import { fetchArticles, fetchCarrers, fetchCategories, fetchLifestyles, fetchTechnologies } from "../../http";
+import {
+  fetchArticles,
+  fetchCarrers,
+  fetchCategories,
+  fetchFinances,
+  fetchLifestyles,
+  fetchTechnologies,
+} from "../../http";
 import Layout from "../../components/layout";
 
 const Category = (props) => {
@@ -55,9 +62,6 @@ export async function getStaticProps(context) {
 
   // const categories = await fetchCategories(catQuery);
 
-  
-
-  
   const artQuery = qs.stringify(
     {
       populate: {
@@ -118,6 +122,20 @@ export async function getStaticProps(context) {
 
   const lifestyles = await fetchLifestyles(lifestyleQuery);
 
+  const financeQuery = qs.stringify(
+    {
+      populate: {
+        category: true,
+        image: true,
+        author: true,
+      },
+    },
+    {
+      encodeValuesOnly: true,
+    }
+  );
+
+  const finances = await fetchFinances(financeQuery);
 
   //   console.log(articles.data.data,query);
 
@@ -128,22 +146,27 @@ export async function getStaticProps(context) {
       articles: {
         item: articles.data.data,
         pagination: articles.data.meta.pagination,
-        parentPath:"posts"
+        parentPath: "posts",
       },
       careers: {
         item: careers.data.data,
         pagination: careers.data.meta.pagination,
-        parentPath:"careers"
+        parentPath: "careers",
       },
       technologies: {
         item: technologies.data.data,
         pagination: technologies.data.meta.pagination,
-        parentPath:"technologies"
+        parentPath: "technologies",
       },
       lifestyles: {
         item: lifestyles.data.data,
         pagination: lifestyles.data.meta.pagination,
-        parentPath:"lifestyles"
+        parentPath: "lifestyles",
+      },
+      finances: {
+        item: finances.data.data,
+        pagination: finances.data.meta.pagination,
+        parentPath: "finances",
       },
     },
   };

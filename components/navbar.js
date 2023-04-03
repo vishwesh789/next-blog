@@ -87,6 +87,17 @@ const Navbar = () => {
                   </li>
                 );
               })} */}
+               <li>
+                <Link
+                  href={"/category/finance"}
+                  className="navbar-link hover-1"
+                  data-nav-toggler
+                  ref={navTogglers}
+                  onClick={toggleNav}
+                >
+                  Finance
+                </Link>
+              </li>
               <li>
                 <Link
                   href={"/category/health"}

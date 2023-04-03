@@ -206,7 +206,7 @@ const Topics = (props) => {
                   </div>
                 </Link>
               </li>
-              <li className="slider-item" >
+              <li className="slider-item">
                 <Link href={`/category/health`} className="slider-card">
                   <figure
                     className="slider-banner img-holder"
@@ -254,6 +254,31 @@ const Topics = (props) => {
                     <span className="slider-title">Technology</span>
 
                     <p className="slider-subtitle">10 Articles</p>
+                  </div>
+                </Link>
+              </li>
+              <li className="slider-item">
+                <Link href={`/category/finance`} className="slider-card">
+                  <figure
+                    className="slider-banner img-holder"
+                    style={{ "--width": 507, "--height": 618 }}
+                  >
+                    <Image
+                      src={
+                        "https://images.pexels.com/photos/318820/pexels-photo-318820.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                      }
+                      width="507"
+                      height="618"
+                      loading="lazy"
+                      alt="Sport"
+                      className="img-cover"
+                    />
+                  </figure>
+
+                  <div className="slider-content">
+                    <span className="slider-title">Finance</span>
+
+                    <p className="slider-subtitle">20 Articles</p>
                   </div>
                 </Link>
               </li>

@@ -33,6 +33,10 @@ const FeaturedPost = (props) => {
           case "lifestyle":
             articles = props.data.lifestyles.item;
             parentPath =props.data.lifestyles.parentPath
+          break;
+          case "finance":
+            articles = props.data.finances.item;
+            parentPath =props.data.finances.parentPath
             break;
           default:
           articles = props.data.careers.item
