@@ -45,7 +45,6 @@ const Technologies = (props) => {
 
   const generateRandomRelatedPost = () => {
     const selectedItems = [];
-    console.log("heloooooooooooooooooooooooooooooooooooooo");
     while (selectedItems.length < 5) {
       const randomItem = getRandomItem(techJson);
       if (!selectedItems.includes(randomItem)) {
@@ -58,7 +57,6 @@ const Technologies = (props) => {
 
   const generatePopularRelatedPost = () => {
     const selectedItems = [];
-    console.log("heloooooooooooooooooooooooooooooooooooooo");
     while (selectedItems.length < 5) {
       const randomItem = getRandomItem(techJson);
       if (!selectedItems.includes(randomItem)) {

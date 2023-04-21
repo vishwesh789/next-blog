@@ -20,11 +20,54 @@ import {
   TwitterShareButton,
   TwitterIcon,
 } from "next-share";
+import { healthJson } from "../../data-json/health";
+import { useEffect, useState } from "react";
+import PopularTags from "../../components/popularTags";
+import RecentPosts from "../../components/recentPosts";
 
 const Posts = (props) => {
   // console.log("propsssssssss in article", props.article[0].attributes);
   const article = props.article;
   const m = article[0].attributes.body.content;
+
+  useEffect(() => {
+    generateRandomRelatedPost();
+    generatePopularRelatedPost();
+    return () => {};
+  }, []);
+
+  const [randomPosts, setRandomPosts] = useState([]);
+  const [popularPosts, setPopularPosts] = useState([]);
+
+  function getRandomItem(arr) {
+    return arr[Math.floor(Math.random() * arr.length)];
+  }
+
+  // Create an empty array to store the randomly selected items
+
+  const generateRandomRelatedPost = () => {
+    const selectedItems = [];
+    while (selectedItems.length < 5) {
+      const randomItem = getRandomItem(healthJson);
+      if (!selectedItems.includes(randomItem)) {
+        selectedItems.push(randomItem);
+      }
+    }
+
+    setRandomPosts((oa) => [...oa, selectedItems]);
+  };
+
+  const generatePopularRelatedPost = () => {
+    const selectedItems = [];
+    while (selectedItems.length < 5) {
+      const randomItem = getRandomItem(healthJson);
+      if (!selectedItems.includes(randomItem)) {
+        selectedItems.push(randomItem);
+      }
+    }
+
+    setPopularPosts(selectedItems);
+  };
 
   return (
     <Layout data={props}>
@@ -203,7 +246,8 @@ const Posts = (props) => {
         </div>
         
       </div>
-      
+      <PopularTags />
+      <RecentPosts randomPosts={randomPosts} popularPosts={popularPosts} />
     </Layout>
   );
 };
