@@ -227,12 +227,13 @@ const Lifestyles = (props) => {
           </div>
         </div>
       </div>
-      <PopularTags />
+
       <RecentPosts
         randomPosts={randomPosts}
         popularPosts={popularPosts}
         cat={"lifestyles"}
       />
+      <PopularTags />
     </Layout>
   );
 };

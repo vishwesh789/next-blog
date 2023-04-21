@@ -176,11 +176,9 @@ const Posts = (props) => {
             </div>
             <div className="card-wrapper">
               <div className="profile-card">
-               
-
                 <div>
                   <p className="card-title">
-                   By: {article[0].attributes.author.data.attributes.username}
+                    By: {article[0].attributes.author.data.attributes.username}
                   </p>
 
                   {/* <p className="card-subtitle">25 Nov 2022</p> */}
@@ -226,8 +224,10 @@ const Posts = (props) => {
               </div>
             )}
           </div>
-          <div style={{ textAlign: "center", marginBottom: 30 ,marginTop:80}}>
-            <p style={{ marginBottom: 20, fontWeight:'bold',fontSize:18 }}>MEDICAL DISCLAIMER</p>
+          <div style={{ textAlign: "center", marginBottom: 30, marginTop: 80 }}>
+            <p style={{ marginBottom: 20, fontWeight: "bold", fontSize: 18 }}>
+              MEDICAL DISCLAIMER
+            </p>
             <p style={{ fontSize: 14 }}>
               This content is provided solely for informational and educational
               purposes. It is not intended to give medical advice or to
@@ -244,10 +244,13 @@ const Posts = (props) => {
             </p>
           </div>
         </div>
-        
       </div>
+      <RecentPosts
+        randomPosts={randomPosts}
+        popularPosts={popularPosts}
+        cat={"posts"}
+      />
       <PopularTags />
-      <RecentPosts randomPosts={randomPosts} popularPosts={popularPosts} cat={"posts"} />
     </Layout>
   );
 };
