@@ -152,23 +152,7 @@ const Footer = () => {
               </Link>
             </div>
           </div>
-          <div style={{ textAlign: "center", marginBottom: 30 }}>
-            <p style={{ marginBottom: 20, fontWeight:'bold',fontSize:18 }}>MEDICAL DISCLAIMER</p>
-            <p style={{ fontSize: 14 }}>
-              This content is provided solely for informational and educational
-              purposes. It is not intended to give medical advice or to
-              substitute for medical advice or treatment from a personal
-              physician. Regarding specific health questions, all
-              readers/viewers of this content are advised to consult their
-              doctors or qualified health professionals. Acehealthwealth.com
-               and the publisher of this content accept no responsibility for
-              any health consequences that may result from anyone reading or
-              following the information in this educational content. Before
-              beginning any nutrition, supplement, or lifestyle programme, all
-              viewers of this content, especially those taking prescription or
-              over-the-counter medications, should consult their physicians.
-            </p>
-          </div>
+          
 
           <div className="footer-bottom">
             <p className="copyright">

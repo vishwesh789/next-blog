@@ -1,12 +1,11 @@
 import "../styles/globals.css";
 import Script from "next/script";
-import localFont from "@next/font/local";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import * as gtag from "../lib/gtag";
 
-// Font files can be colocated inside of `pages`
-// const myFont = localFont({ src: "../public/fonts/VAGRundschriftD.ttf" });
+import "../styles/prism-one-dark.css"
+
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();

@@ -1,87 +1,107 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const PopularTags = () => {
   return (
-    <section className="tags" aria-labelledby="tag-label">
+    <section
+      className="tags"
+      aria-labelledby="tag-label"
+      style={{ marginTop: 50 }}
+    >
       <div className="container">
         <h2 className="headline headline-2 section-title" id="tag-label">
-          <span className="span">Popular Tags</span>
+          <span className="span">Popular Categories</span>
         </h2>
 
-        <p className="section-text">Most searched keywords</p>
+        {/* <p className="section-text">Most searched keywords</p> */}
 
-        <ul className="grid-list">
+        <ul className="grid-list" style={{ marginTop: 50 }}>
           <li>
-            <button className="card tag-btn">
-              <Image
+            <Link
+              className="card tag-btn"
+              href={"https://www.acehealthwealth.com/category/career/"}
+            >
+              {/* <Image
                 src="/images/tag1.png"
                 width="32"
                 height="32"
                 loading="lazy"
                 alt="Travel"
-              />
+              /> */}
 
-              <p className="btn-text">Travel</p>
-            </button>
+              <p className="btn-text">Career</p>
+            </Link>
           </li>
 
           <li>
-            <button className="card tag-btn">
-              <Image
+            <Link
+              className="card tag-btn"
+              href={"https://www.acehealthwealth.com/category/finance/"}
+            >
+              {/* <Image
                 src="/images/tag2.png"
                 width="32"
                 height="32"
                 loading="lazy"
                 alt="Culture"
-              />
+              /> */}
 
-              <p className="btn-text">Culture</p>
-            </button>
+              <p className="btn-text">Finance</p>
+            </Link>
           </li>
 
           <li>
-            <button className="card tag-btn">
-              <Image
+            <Link
+              className="card tag-btn"
+              href={"https://www.acehealthwealth.com/category/lifestyle/"}
+            >
+              {/* <Image
                 src="/images/tag3.png"
                 width="32"
                 height="32"
                 loading="lazy"
                 alt="Lifestyle"
-              />
+              /> */}
 
               <p className="btn-text">Lifestyle</p>
-            </button>
+            </Link>
           </li>
 
           <li>
-            <button className="card tag-btn">
-              <Image
+            <Link
+              className="card tag-btn"
+              href={"https://www.acehealthwealth.com/category/technology/"}
+            >
+              {/* <Image
                 src="/images/tag4.png"
                 width="32"
                 height="32"
                 loading="lazy"
                 alt="Fashion"
-              />
+              /> */}
 
-              <p className="btn-text">Fashion</p>
-            </button>
+              <p className="btn-text">Technologies</p>
+            </Link>
           </li>
 
           <li>
-            <button className="card tag-btn">
-              <Image
+            <Link
+              className="card tag-btn"
+              href={"https://www.acehealthwealth.com/category/health/"}
+            >
+              {/* <Image
                 src="/images/tag5.png"
                 width="32"
                 height="32"
                 loading="lazy"
                 alt="Food"
-              />
+              /> */}
 
-              <p className="btn-text">Food</p>
-            </button>
+              <p className="btn-text">Health</p>
+            </Link>
           </li>
 
-          <li>
+          {/* <li>
             <button className="card tag-btn">
               <Image
                 src="/images/tag6.png"
@@ -177,7 +197,7 @@ const PopularTags = () => {
 
               <p className="btn-text">Business</p>
             </button>
-          </li>
+          </li> */}
         </ul>
       </div>
     </section>

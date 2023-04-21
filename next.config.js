@@ -2,7 +2,7 @@
 // const withExportImages = require("next-export-optimize-images");
 
 const nextConfig = {
-  reactStrictMode: true,
+  reactStrictMode: false,
   trailingSlash: true,
   images: {
     domains: ["localhost", "api.myforexbuddy.com", "images.unsplash.com"],

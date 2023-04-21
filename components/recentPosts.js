@@ -1,7 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const RecentPosts = () => {
+const RecentPosts = (props) => {
+  const { randomPosts, popularPosts } = props;
+  console.log("propsssssssss in technology", randomPosts);
+
   return (
     <section
       className="section recent-post"
@@ -16,7 +19,38 @@ const RecentPosts = () => {
 
           <p className="section-text">Don't miss the latest trends</p>
 
-          <ul className="grid-list">
+          {randomPosts[0]?.map((post, i) => {
+            return (
+              <div
+                className="card-content"
+                key={i}
+                style={{ marginBottom: 30 }}
+              >
+                <h3 className="headline headline-3 card-title">
+                  <Link
+                    href={`https://www.acehealthwealth.com/technologies/${post.slug}/`}
+                    className="link hover-2"
+                  >
+                    {post.title}
+                  </Link>
+                </h3>
+
+                {/* <p className="card-text"style={{marginTop:20}}>
+                  {post.metaDesc}
+                </p> */}
+
+                <div className="card-wrapper">
+                  <div className="wrapper">
+                    <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                    <span className="span">{post.readTime} mins read</span>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+
+          {/* <ul className="grid-list">
             <li>
               <div className="recent-post-card">
                 <figure
@@ -301,9 +335,9 @@ const RecentPosts = () => {
                 </div>
               </div>
             </li>
-          </ul>
+          </ul> */}
 
-          <nav aria-label="pagination" className="pagination">
+          {/* <nav aria-label="pagination" className="pagination">
             <Link href="#" className="pagination-btn" aria-label="previous page">
               <ion-icon name="arrow-back" aria-hidden="true"></ion-icon>
             </Link>
@@ -324,11 +358,63 @@ const RecentPosts = () => {
             <Link href="#" className="pagination-btn" aria-label="next page">
               <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
             </Link>
-          </nav>
+          </nav> */}
+        </div>
+        <div className="post-aside grid-list" >
+          <div className="card aside-card">
+            <h3 className="headline headline-2 aside-title">
+              <span className="span">Popular Posts</span>
+            </h3>
+            {popularPosts?.map((post, i) => {
+              return (
+                <ul className="popular-list" key={i}>
+                  <li>
+                    <div className="popular-card">
+                      <figure
+                        className="card-banner img-holder"
+                        style={{ "--width": 64, "--height": 64 }}
+                      >
+                        <Image
+                          src={post.img}
+                          width="64"
+                          height="64"
+                          loading="lazy"
+                          alt="Creating is a privilege but it’s also a gift"
+                          className="img-cover"
+                        />
+                      </figure>
+
+                      <div className="card-content">
+                        <h4 className="headline headline-4 card-title">
+                          <Link
+                            href={`https://www.acehealthwealth.com/technologies/${post.slug}/`}
+                            className="link hover-2"
+                          >
+                            {post.title}
+                          </Link>
+                        </h4>
+
+                        <div className="warpper">
+                          <p className="card-subtitle">
+                            {post.readTime} mins read
+                          </p>
+
+                          {/* <time className="publish-date" dateTime="2022-04-15">
+                            15 April 2022
+                          </time> */}
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                
+              );
+            })}
+          </div>
         </div>
 
-        <div className="post-aside grid-list">
-          {/* <div className="card aside-card">
+        {/* <div className="post-aside grid-list"> */}
+        {/* <div className="card aside-card">
             <h3 className="headline headline-2 aside-title">
               <span className="span">Popular Posts</span>
             </h3>
@@ -506,7 +592,7 @@ const RecentPosts = () => {
             </ul>
           </div> */}
 
-          {/* <div className="card aside-card">
+        {/* <div className="card aside-card">
             <h3 className="headline headline-2 aside-title">
               <span className="span">Last Comment</span>
             </h3>
@@ -601,7 +687,7 @@ const RecentPosts = () => {
             </ul>
           </div> */}
 
-          {/* <div className="card aside-card insta-card">
+        {/* <div className="card aside-card insta-card">
             <Link href="#" className="logo">
               <Image
                 src="/images/logo.svg"
@@ -769,8 +855,8 @@ const RecentPosts = () => {
               </li>
             </ul>
           </div> */}
-        </div>
       </div>
+      {/* </div> */}
     </section>
   );
 };

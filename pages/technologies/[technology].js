@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Layout from "../../components/layout";
 import qs from "qs";
-import { fetchCategories,fetchTechnologies } from "../../http";
+import { fetchCategories, fetchTechnologies } from "../../http";
 import Head from "next/head";
 import {
   FacebookShareButton,
@@ -20,9 +20,55 @@ import {
   TwitterShareButton,
   TwitterIcon,
 } from "next-share";
+import PopularTags from "../../components/popularTags";
+import RecentPosts from "../../components/recentPosts";
+import { useEffect, useState } from "react";
+import { techJson } from "../../data-json/technology";
 
 const Technologies = (props) => {
   // console.log("propsssssssss in technology", props.technology[0].attributes);
+
+  useEffect(() => {
+    generateRandomRelatedPost();
+    generatePopularRelatedPost();
+    return () => {};
+  }, []);
+
+  const [randomPosts, setRandomPosts] = useState([]);
+  const [popularPosts, setPopularPosts] = useState([]);
+
+  function getRandomItem(arr) {
+    return arr[Math.floor(Math.random() * arr.length)];
+  }
+
+  // Create an empty array to store the randomly selected items
+
+  const generateRandomRelatedPost = () => {
+    const selectedItems = [];
+    console.log("heloooooooooooooooooooooooooooooooooooooo");
+    while (selectedItems.length < 5) {
+      const randomItem = getRandomItem(techJson);
+      if (!selectedItems.includes(randomItem)) {
+        selectedItems.push(randomItem);
+      }
+    }
+
+    setRandomPosts((oa) => [...oa, selectedItems]);
+  };
+
+  const generatePopularRelatedPost = () => {
+    const selectedItems = [];
+    console.log("heloooooooooooooooooooooooooooooooooooooo");
+    while (selectedItems.length < 5) {
+      const randomItem = getRandomItem(techJson);
+      if (!selectedItems.includes(randomItem)) {
+        selectedItems.push(randomItem);
+      }
+    }
+
+    setPopularPosts(selectedItems);
+  };
+
   const technology = props.technology;
   const m = technology[0].attributes.body.content;
 
@@ -135,7 +181,8 @@ const Technologies = (props) => {
               <div className="profile-card">
                 <div>
                   <p className="card-title">
-                   By: {technology[0].attributes.author.data.attributes.username}
+                    By:{" "}
+                    {technology[0].attributes.author.data.attributes.username}
                   </p>
 
                   {/* <p className="card-subtitle">25 Nov 2022</p> */}
@@ -183,6 +230,8 @@ const Technologies = (props) => {
           </div>
         </div>
       </div>
+      <PopularTags />
+      <RecentPosts randomPosts={randomPosts} popularPosts={popularPosts} />
     </Layout>
   );
 };
