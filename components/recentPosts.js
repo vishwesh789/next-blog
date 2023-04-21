@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const RecentPosts = (props) => {
-  const { randomPosts, popularPosts,cat } = props;
+  const { randomPosts, popularPosts, cat } = props;
   console.log("propsssssssss in technology", randomPosts);
 
   return (
@@ -18,37 +18,67 @@ const RecentPosts = (props) => {
           </h2>
 
           <p className="section-text">Don't miss the latest trends</p>
+          <ul className="grid-list" >
+            {randomPosts[0]?.map((post, i) => {
+              return (
+                <li key={i}>
+                  <div className="recent-post-card">
+                    <figure
+                      className="card-banner img-holder"
+                      style={{ "--width": 271, "--height": 258 }}
+                    >
+                      <Image
+                        src={post.img}
+                        width="271"
+                        height="258"
+                        loading="lazy"
+                        alt="Helpful Tips for Working from Home as a Freelancer"
+                        className="img-cover"
+                      />
+                    </figure>
 
-          {randomPosts[0]?.map((post, i) => {
-            return (
-              <div
-                className="card-content"
-                key={i}
-                style={{ marginBottom: 30 }}
-              >
-                <h3 className="headline headline-3 card-title">
-                  <Link
-                    href={`https://www.acehealthwealth.com/${cat}/${post.slug}/`}
-                    className="link hover-2"
-                  >
-                    {post.title}
-                  </Link>
-                </h3>
+                    <div className="card-content">
+                      <Link href="#" className="card-badge">
+                        {cat == "posts" ? "Health" : cat}
+                      </Link>
 
-                {/* <p className="card-text"style={{marginTop:20}}>
-                  {post.metaDesc}
-                </p> */}
+                      <h3 className="headline headline-3 card-title">
+                        <Link
+                          href={`https://www.acehealthwealth.com/${cat}/${post.slug}/`}
+                          className="link hover-2"
+                        >
+                          {post.title}
+                        </Link>
+                      </h3>
 
-                <div className="card-wrapper">
-                  <div className="wrapper">
-                    <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                      <p className="card-text">
+                        {post.metaDesc.substring(0, 120)} ...
+                      </p>
 
-                    <span className="span">{post.readTime} mins read</span>
+                      <div className="card-wrapper">
+                        <div className="card-tag">
+                          <Link href="#" className="span hover-2">
+                            # {post.tags}
+                          </Link>
+                        </div>
+
+                        <div className="wrapper">
+                          <ion-icon
+                            name="time-outline"
+                            aria-hidden="true"
+                          ></ion-icon>
+
+                          <span className="span">
+                            {post.readTime} mins read
+                          </span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            );
-          })}
+                </li>
+              );
+            })}
+          </ul>
 
           {/* <ul className="grid-list">
             <li>
@@ -360,7 +390,7 @@ const RecentPosts = (props) => {
             </Link>
           </nav> */}
         </div>
-        <div className="post-aside grid-list" >
+        <div className="post-aside grid-list">
           <div className="card aside-card">
             <h3 className="headline headline-2 aside-title">
               <span className="span">Popular Posts</span>
@@ -407,7 +437,6 @@ const RecentPosts = (props) => {
                     </div>
                   </li>
                 </ul>
-                
               );
             })}
           </div>
