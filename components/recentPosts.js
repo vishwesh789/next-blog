@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const RecentPosts = (props) => {
-  const { randomPosts, popularPosts } = props;
+  const { randomPosts, popularPosts,cat } = props;
   console.log("propsssssssss in technology", randomPosts);
 
   return (
@@ -28,7 +28,7 @@ const RecentPosts = (props) => {
               >
                 <h3 className="headline headline-3 card-title">
                   <Link
-                    href={`https://www.acehealthwealth.com/technologies/${post.slug}/`}
+                    href={`https://www.acehealthwealth.com/${cat}/${post.slug}/`}
                     className="link hover-2"
                   >
                     {post.title}
@@ -387,7 +387,7 @@ const RecentPosts = (props) => {
                       <div className="card-content">
                         <h4 className="headline headline-4 card-title">
                           <Link
-                            href={`https://www.acehealthwealth.com/technologies/${post.slug}/`}
+                            href={`https://www.acehealthwealth.com/${cat}/${post.slug}/`}
                             className="link hover-2"
                           >
                             {post.title}

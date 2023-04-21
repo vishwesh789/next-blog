@@ -69,7 +69,6 @@ const Finances = (props) => {
     setPopularPosts(selectedItems);
   };
 
-
   return (
     <Layout data={props}>
       <Head>
@@ -179,7 +178,7 @@ const Finances = (props) => {
               <div className="profile-card">
                 <div>
                   <p className="card-title">
-                   By: {finance[0].attributes.author.data.attributes.username}
+                    By: {finance[0].attributes.author.data.attributes.username}
                   </p>
 
                   {/* <p className="card-subtitle">25 Nov 2022</p> */}
@@ -228,7 +227,11 @@ const Finances = (props) => {
         </div>
       </div>
       <PopularTags />
-      <RecentPosts randomPosts={randomPosts} popularPosts={popularPosts} />
+      <RecentPosts
+        randomPosts={randomPosts}
+        popularPosts={popularPosts}
+        cat={"finances"}
+      />
     </Layout>
   );
 };

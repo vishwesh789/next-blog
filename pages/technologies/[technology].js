@@ -229,7 +229,11 @@ const Technologies = (props) => {
         </div>
       </div>
       <PopularTags />
-      <RecentPosts randomPosts={randomPosts} popularPosts={popularPosts} />
+      <RecentPosts
+        randomPosts={randomPosts}
+        popularPosts={popularPosts}
+        cat={"technologies"}
+      />
     </Layout>
   );
 };

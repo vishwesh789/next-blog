@@ -30,7 +30,6 @@ const Careers = (props) => {
   const career = props.career;
   const m = career[0].attributes.body.content;
 
-
   useEffect(() => {
     generateRandomRelatedPost();
     generatePopularRelatedPost();
@@ -69,7 +68,6 @@ const Careers = (props) => {
 
     setPopularPosts(selectedItems);
   };
-
 
   return (
     <Layout data={props}>
@@ -180,7 +178,7 @@ const Careers = (props) => {
               <div className="profile-card">
                 <div>
                   <p className="card-title">
-                   By: {career[0].attributes.author.data.attributes.username}
+                    By: {career[0].attributes.author.data.attributes.username}
                   </p>
 
                   {/* <p className="card-subtitle">25 Nov 2022</p> */}
@@ -229,7 +227,11 @@ const Careers = (props) => {
         </div>
       </div>
       <PopularTags />
-      <RecentPosts randomPosts={randomPosts} popularPosts={popularPosts} />
+      <RecentPosts
+        randomPosts={randomPosts}
+        popularPosts={popularPosts}
+        cat={"careers"}
+      />
     </Layout>
   );
 };

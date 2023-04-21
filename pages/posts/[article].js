@@ -247,7 +247,7 @@ const Posts = (props) => {
         
       </div>
       <PopularTags />
-      <RecentPosts randomPosts={randomPosts} popularPosts={popularPosts} />
+      <RecentPosts randomPosts={randomPosts} popularPosts={popularPosts} cat={"posts"} />
     </Layout>
   );
 };

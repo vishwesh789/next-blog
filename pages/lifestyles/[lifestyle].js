@@ -178,7 +178,8 @@ const Lifestyles = (props) => {
               <div className="profile-card">
                 <div>
                   <p className="card-title">
-                   By: {lifestyle[0].attributes.author.data.attributes.username}
+                    By:{" "}
+                    {lifestyle[0].attributes.author.data.attributes.username}
                   </p>
 
                   {/* <p className="card-subtitle">25 Nov 2022</p> */}
@@ -227,7 +228,11 @@ const Lifestyles = (props) => {
         </div>
       </div>
       <PopularTags />
-      <RecentPosts randomPosts={randomPosts} popularPosts={popularPosts} />
+      <RecentPosts
+        randomPosts={randomPosts}
+        popularPosts={popularPosts}
+        cat={"lifestyles"}
+      />
     </Layout>
   );
 };
