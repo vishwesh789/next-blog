@@ -1,15 +1,8 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
-import Hero from "../components/hero";
-import Topics from "../components/topics";
 import FeaturedPost from "../components/featuredPost";
-import PopularTags from "../components/popularTags";
-import RecentPosts from "../components/recentPosts";
 import { fetchArticles, fetchCategories } from "../http";
 import Layout from "../components/layout";
 import qs from "qs";
-import Link from "next/link";
-import { useEffect, useRef } from "react";
 
 export default function Home(props) {
   return (

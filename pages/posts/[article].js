@@ -20,11 +20,53 @@ import {
   TwitterShareButton,
   TwitterIcon,
 } from "next-share";
+import { healthJson } from "../../data-json/health";
+import { useEffect, useState } from "react";
+import RecentPosts from "../../components/recentPosts";
 
 const Posts = (props) => {
-  console.log("propsssssssss in article", props.article[0].attributes);
+  // console.log("propsssssssss in article", props.article[0].attributes);
   const article = props.article;
   const m = article[0].attributes.body.content;
+
+  useEffect(() => {
+    generateRandomRelatedPost();
+    generatePopularRelatedPost();
+    return () => {};
+  }, []);
+
+  const [randomPosts, setRandomPosts] = useState([]);
+  const [popularPosts, setPopularPosts] = useState([]);
+
+  function getRandomItem(arr) {
+    return arr[Math.floor(Math.random() * arr.length)];
+  }
+
+  // Create an empty array to store the randomly selected items
+
+  const generateRandomRelatedPost = () => {
+    const selectedItems = [];
+    while (selectedItems.length < 5) {
+      const randomItem = getRandomItem(healthJson);
+      if (!selectedItems.includes(randomItem)) {
+        selectedItems.push(randomItem);
+      }
+    }
+
+    setRandomPosts((oa) => [...oa, selectedItems]);
+  };
+
+  const generatePopularRelatedPost = () => {
+    const selectedItems = [];
+    while (selectedItems.length < 5) {
+      const randomItem = getRandomItem(healthJson);
+      if (!selectedItems.includes(randomItem)) {
+        selectedItems.push(randomItem);
+      }
+    }
+
+    setPopularPosts(selectedItems);
+  };
 
   return (
     <Layout data={props}>
@@ -68,12 +110,12 @@ const Posts = (props) => {
               width="1602"
               height="903"
               loading="lazy"
-              alt="Self-observation is the first step of inner unfolding"
+              alt={article[0].attributes.title}
               className="img-cover"
             />
           </figure>
 
-          <div style={{ flexDirection: "row", display: "flex" }}>
+          <div style={{ flexDirection: "row", display: "flex", gap: 5 }}>
             <FacebookShareButton
               url={`https://www.acehealthwealth.com/posts/${article[0].attributes.slug}/`}
             >
@@ -133,30 +175,25 @@ const Posts = (props) => {
             </div>
             <div className="card-wrapper">
               <div className="profile-card">
-                <Image
-                  src={"/images/author-1.png"}
-                  width="48"
-                  height="48"
-                  loading="lazy"
-                  alt="Joseph"
-                  className="profile-banner"
-                />
-
                 <div>
                   <p className="card-title">
-                    {article[0].attributes.author.data.attributes.username}
+                    By: {article[0].attributes.author.data.attributes.username}
                   </p>
 
                   {/* <p className="card-subtitle">25 Nov 2022</p> */}
                 </div>
               </div>
             </div>
-            <h1 className="headline headline-3">
-              <Link href="#" className="card-title hover-2">
-                {article[0].attributes.title}
-              </Link>
+            <h1
+              className="headline headline-3"
+              style={{
+                fontSize: 30,
+              }}
+            >
+              {article[0].attributes.title}
             </h1>
             <div
+              className="content"
               style={{
                 marginTop: 30,
                 wordSpacing: 3,
@@ -188,6 +225,11 @@ const Posts = (props) => {
           </div>
         </div>
       </div>
+      <RecentPosts
+        randomPosts={randomPosts}
+        popularPosts={popularPosts}
+        cat={"posts"}
+      />
     </Layout>
   );
 };
@@ -221,19 +263,19 @@ export async function getStaticProps(context) {
   // Fetch data from external API
   console.log("contexttttt", context);
 
-  const catQuery = qs.stringify(
-    {
-      populate: {
-        articles: true,
-        image: true,
-      },
-    },
-    {
-      encodeValuesOnly: true,
-    }
-  );
+  // const catQuery = qs.stringify(
+  //   {
+  //     populate: {
+  //       articles: true,
+  //       image: true,
+  //     },
+  //   },
+  //   {
+  //     encodeValuesOnly: true,
+  //   }
+  // );
 
-  const categories = await fetchCategories(catQuery);
+  // const categories = await fetchCategories(catQuery);
 
   const artQueryWithFilter = qs.stringify(
     {
@@ -259,7 +301,7 @@ export async function getStaticProps(context) {
   // Pass data to the page via props
   return {
     props: {
-      categories: categories.data.data,
+      // categories: categories.data.data,
       article: article.data.data,
     },
   };

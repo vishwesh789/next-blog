@@ -42,7 +42,7 @@ const Navbar = (props) => {
         <div className="container">
           <Link href="/" className="logo">
             <Image
-              src="/images/logo.svg"
+              src="/images/FOREX-logo.png"
               width="119"
               height="37"
               alt="Wren logo"
@@ -52,12 +52,12 @@ const Navbar = (props) => {
           <nav className="navbar" data-navbar ref={navbar}>
             <div className="navbar-top">
               <Link href="/" className="logo">
-                <Image
-                  src="/images/logo.svg"
-                  width="119"
-                  height="37"
-                  alt="Wren logo"
-                />
+              <Image
+              src="/images/FOREX-logo.png"
+              width="119"
+              height="37"
+              alt="Wren logo"
+            />
               </Link>
 
               <button

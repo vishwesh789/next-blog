@@ -1,29 +1,22 @@
+
 /** @type {import('next').NextConfig} */
-const withExportImages = require("next-export-optimize-images");
+// const withExportImages = require("next-export-optimize-images");
 
 const nextConfig = {
-  reactStrictMode: true,
+  reactStrictMode: false,
   trailingSlash: true,
   images: {
-    domains: ["localhost", "api.myforexbuddy.com", "images.unsplash.com"],
+    domains: ["localhost","images.unsplash.com"],
+    unoptimized:true
   },
   swcMinify: true,
-  async rewrites() {
-    return [
-      {
-        source: '/',
-        destination: '/pinterest-68df3.html',
-      },
-    ]
-  }
+  
 };
 
 
+module.exports = nextConfig
 
-module.exports = (_phase, { defaultConfig }) => {
-  const plugins = [withExportImages];
-  return plugins.reduce((acc, plugin) => plugin(acc), {
-    ...defaultConfig,
-    ...nextConfig,
-  });
-};
+
+
+
+
