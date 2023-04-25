@@ -5,6 +5,9 @@ import { useEffect } from "react";
 import * as gtag from "../lib/gtag";
 
 import "../styles/prism-one-dark.css"
+import 'highlight.js/styles/default.css';
+
+
 
 
 export default function App({ Component, pageProps }) {

@@ -25,13 +25,28 @@ import RecentPosts from "../../components/recentPosts";
 import { useEffect, useState } from "react";
 import { techJson } from "../../data-json/technology";
 
+// import Prism from "prismjs"
+
+// require("prismjs/components/prism-csharp")
+
+// import 'prismjs/themes/prism-tomorrow.css'
+
+// require("prismjs/components/prism-jsx")
+
+import hljs from 'highlight.js';
+import csharp from "highlight.js/lib/languages/csharp";
+hljs.registerLanguage('csharp', csharp);
+
 const Technologies = (props) => {
   // console.log("propsssssssss in technology", props.technology[0].attributes);
 
   useEffect(() => {
     generateRandomRelatedPost();
     generatePopularRelatedPost();
-    return () => {};
+    // Prism.highlightAll()
+    hljs.initHighlighting();
+    return () => {
+    };
   }, []);
 
   const [randomPosts, setRandomPosts] = useState([]);
