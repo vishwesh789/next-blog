@@ -33,9 +33,9 @@ import { techJson } from "../../data-json/technology";
 
 // require("prismjs/components/prism-jsx")
 
-import hljs from 'highlight.js';
-import csharp from "highlight.js/lib/languages/csharp";
-hljs.registerLanguage('csharp', csharp);
+// import hljs from 'highlight.js';
+// import csharp from "highlight.js/lib/languages/csharp";
+// hljs.registerLanguage('csharp', csharp);
 
 const Technologies = (props) => {
   // console.log("propsssssssss in technology", props.technology[0].attributes);
@@ -44,7 +44,7 @@ const Technologies = (props) => {
     generateRandomRelatedPost();
     generatePopularRelatedPost();
     // Prism.highlightAll()
-    hljs.initHighlighting();
+    // hljs.initHighlighting();
     return () => {
     };
   }, []);
