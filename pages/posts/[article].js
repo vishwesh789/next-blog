@@ -24,11 +24,25 @@ import { healthJson } from "../../data-json/health";
 import { useEffect, useState } from "react";
 import PopularTags from "../../components/popularTags";
 import RecentPosts from "../../components/recentPosts";
+import rehypePrism from "rehype-prism-plus";
+import rehypeCodeTitles from "rehype-code-titles";
+import { MDXRemote } from "next-mdx-remote";
+import { serialize } from "next-mdx-remote/serialize";
 
 const Posts = (props) => {
   // console.log("propsssssssss in article", props.article[0].attributes);
-  const article = props.article;
-  const m = article[0].attributes.body.content;
+
+  const {
+    content,
+    title,
+    metaDesc,
+    tags,
+    slug,
+    readTime,
+    img,
+    dataSources,
+    author,
+  } = props;
 
   useEffect(() => {
     generateRandomRelatedPost();
@@ -72,33 +86,27 @@ const Posts = (props) => {
   return (
     <Layout data={props}>
       <Head>
-        <title>{article[0].attributes.title}</title>
-        <meta name="description" content={article[0].attributes.metaDesc} />
+        <title>{title}</title>
+        <meta name="description" content={metaDesc} />
 
         <meta
           property="og:url"
-          content={`https://www.acehealthwealth.com/posts/${article[0].attributes.slug}/`}
+          content={`https://www.acehealthwealth.com/posts/${slug}/`}
         />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content={article[0].attributes.title} />
-        <meta
-          property="og:description"
-          content={article[0].attributes.metaDesc}
-        />
-        <meta property="og:image" content={article[0].attributes.img} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={metaDesc} />
+        <meta property="og:image" content={img} />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="acehealthwealth.com" />
         <meta
           property="twitter:url"
-          content={`https://www.acehealthwealth.com/posts/${article[0].attributes.slug}/`}
+          content={`https://www.acehealthwealth.com/posts/${slug}/`}
         />
-        <meta name="twitter:title" content={article[0].attributes.title} />
-        <meta
-          name="twitter:description"
-          content={article[0].attributes.metaDesc}
-        />
-        <meta name="twitter:image" content={article[0].attributes.img} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={metaDesc} />
+        <meta name="twitter:image" content={img} />
       </Head>
       <div className="container" style={{ marginTop: 120 }}>
         <div className="card feature-card">
@@ -107,48 +115,48 @@ const Posts = (props) => {
             style={{ "--width": 1602, "--height": 903 }}
           >
             <Image
-              src={article[0].attributes.img}
+              src={img}
               width="1602"
               height="903"
               loading="lazy"
-              alt={article[0].attributes.title}
+              alt={title}
               className="img-cover"
             />
           </figure>
 
           <div style={{ flexDirection: "row", display: "flex", gap: 5 }}>
             <FacebookShareButton
-              url={`https://www.acehealthwealth.com/posts/${article[0].attributes.slug}/`}
+              url={`https://www.acehealthwealth.com/posts/${slug}/`}
             >
               <FacebookIcon size={32} round />
             </FacebookShareButton>
             <PinterestShareButton
-              url={`https://www.acehealthwealth.com/posts/${article[0].attributes.slug}/`}
+              url={`https://www.acehealthwealth.com/posts/${slug}/`}
             >
               <PinterestIcon size={32} round />
             </PinterestShareButton>
             <RedditShareButton
-              url={`https://www.acehealthwealth.com/posts/${article[0].attributes.slug}/`}
+              url={`https://www.acehealthwealth.com/posts/${slug}/`}
             >
               <RedditIcon size={32} round />
             </RedditShareButton>
             <WhatsappShareButton
-              url={`https://www.acehealthwealth.com/posts/${article[0].attributes.slug}/`}
+              url={`https://www.acehealthwealth.com/posts/${slug}/`}
             >
               <WhatsappIcon size={32} round />
             </WhatsappShareButton>
             <LinkedinShareButton
-              url={`https://www.acehealthwealth.com/posts/${article[0].attributes.slug}/`}
+              url={`https://www.acehealthwealth.com/posts/${slug}/`}
             >
               <LinkedinIcon size={32} round />
             </LinkedinShareButton>
             <TelegramShareButton
-              url={`https://www.acehealthwealth.com/posts/${article[0].attributes.slug}/`}
+              url={`https://www.acehealthwealth.com/posts/${slug}/`}
             >
               <TelegramIcon size={32} round />
             </TelegramShareButton>
             <TwitterShareButton
-              url={`https://www.acehealthwealth.com/posts/${article[0].attributes.slug}/`}
+              url={`https://www.acehealthwealth.com/posts/${slug}/`}
             >
               <TwitterIcon size={32} round />
             </TwitterShareButton>
@@ -157,7 +165,7 @@ const Posts = (props) => {
           <div className="card-content">
             <div className="card-wrapper">
               <div className="card-tag">
-                {article[0].attributes.tags.map((tag, index) => {
+                {tags.map((tag, index) => {
                   return (
                     <Link href="#" className="span hover-2" key={index}>
                       #{tag}
@@ -169,16 +177,14 @@ const Posts = (props) => {
               <div className="wrapper">
                 <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
 
-                <span className="span">
-                  {article[0].attributes.readTime} mins read
-                </span>
+                <span className="span">{readTime} mins read</span>
               </div>
             </div>
             <div className="card-wrapper">
               <div className="profile-card">
                 <div>
                   <p className="card-title">
-                    By: {article[0].attributes.author.data.attributes.username}
+                    By: {author.data.attributes.username}
                   </p>
 
                   {/* <p className="card-subtitle">25 Nov 2022</p> */}
@@ -191,7 +197,7 @@ const Posts = (props) => {
                 fontSize: 30,
               }}
             >
-              {article[0].attributes.title}
+              {title}
             </h1>
             <div
               className="content"
@@ -201,14 +207,13 @@ const Posts = (props) => {
                 fontSize: 18,
                 fontWeight: "normal",
               }}
-              dangerouslySetInnerHTML={{
-                __html: m,
-              }}
-            />
-            {article[0].attributes.dataSources && (
+            >
+              <MDXRemote {...content} components={Image} />
+            </div>
+            {dataSources && (
               <div>
                 <h3>Data Sources:</h3>
-                {article[0].attributes.dataSources.map((source, index) => {
+                {dataSources.map((source, index) => {
                   return (
                     <Link
                       href={source}
@@ -316,6 +321,15 @@ export async function getStaticProps(context) {
   );
 
   const article = await fetchArticles(artQueryWithFilter);
+  const content = await serialize(
+    article.data.data[0].attributes.body.content,
+    {
+      mdxOptions: {
+        rehypePlugins: [rehypePrism, rehypeCodeTitles], // add rehype-prism-plus plugin here
+      },
+    }
+  );
+  const a = article.data.data[0].attributes;
 
   // console.log("article ssrrrrrrrrrr", context);
 
@@ -323,7 +337,16 @@ export async function getStaticProps(context) {
   return {
     props: {
       // categories: categories.data.data,
-      article: article.data.data,
+      // article: article.data.data,
+      content: content,
+      title: a.title,
+      metaDesc: a.metaDesc,
+      tags: a.tags,
+      slug: a.slug,
+      readTime: a.readTime,
+      img: a.img,
+      dataSources: a.dataSources,
+      author: a.author,
     },
   };
 }

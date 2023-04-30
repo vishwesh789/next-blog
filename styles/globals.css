@@ -727,7 +727,8 @@ body.nav-active {
   color: #829356;
 }
 
-.content p:after
+.content p:after,
+pre:after
  {
    content: "";
    display: block;
@@ -757,8 +758,7 @@ p > strong:only-child:before
   color: #1D741B;
 }
 
-.content pre {
-}
+
 
 .content pre code {
   /* Set font-size */

@@ -335,7 +335,7 @@ export async function getStaticProps(context) {
       },
     }
   );
-  const tech = technology.data.data[0].attributes;
+  const a = technology.data.data[0].attributes;
 
   // console.log("technology ssrrrrrrrrrr", context);
 
@@ -345,14 +345,14 @@ export async function getStaticProps(context) {
       // categories: categories.data.data,
       // technology: technology.data.data,
       content: content,
-      title: tech.title,
-      metaDesc: tech.metaDesc,
-      tags: tech.tags,
-      slug: tech.slug,
-      readTime: tech.readTime,
-      img: tech.img,
-      dataSources: tech.dataSources,
-      author: tech.author,
+      title: a.title,
+      metaDesc: a.metaDesc,
+      tags: a.tags,
+      slug: a.slug,
+      readTime: a.readTime,
+      img: a.img,
+      dataSources: a.dataSources,
+      author: a.author,
     },
   };
 }
