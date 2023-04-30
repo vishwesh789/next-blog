@@ -127,7 +127,7 @@ li {
 
 a,
 img,
-span,
+/* span, */
 input,
 button,
 ion-icon {
@@ -727,9 +727,45 @@ body.nav-active {
   color: #829356;
 }
 
+.content p:after
+ {
+   content: "";
+   display: block;
+   margin-top: 1em; /* change this value to adjust the height of the line break */
+}
+
+.content
+h1:before,
+h2:before
+ {
+   content: "";
+   display: block;
+   margin-top: 1em; /* change this value to adjust the height of the line break */
+}
+
+
+.content
+p > strong:only-child:before
+ {
+   content: "";
+   display: block;
+   margin-top: 3em; /* change this value to adjust the height of the line break */
+}
+
+
 .content a strong{
   color: #1D741B;
 }
+
+.content pre {
+}
+
+.content pre code {
+  /* Set font-size */
+  font-size: 1em;
+
+}
+
 
 /*-----------------------------------*\
     #POPULAR TAGS

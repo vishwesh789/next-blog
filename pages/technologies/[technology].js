@@ -25,28 +25,28 @@ import RecentPosts from "../../components/recentPosts";
 import { useEffect, useState } from "react";
 import { techJson } from "../../data-json/technology";
 
-// import Prism from "prismjs"
-
-// require("prismjs/components/prism-csharp")
-
-// import 'prismjs/themes/prism-tomorrow.css'
-
-// require("prismjs/components/prism-jsx")
-
-// import hljs from 'highlight.js';
-// import csharp from "highlight.js/lib/languages/csharp";
-// hljs.registerLanguage('csharp', csharp);
+import rehypePrism from "rehype-prism-plus";
+import rehypeCodeTitles from "rehype-code-titles";
+import { MDXRemote } from "next-mdx-remote";
+import { serialize } from "next-mdx-remote/serialize";
 
 const Technologies = (props) => {
   // console.log("propsssssssss in technology", props.technology[0].attributes);
-
+  const {
+    content,
+    title,
+    metaDesc,
+    tags,
+    slug,
+    readTime,
+    img,
+    dataSources,
+    author,
+  } = props;
   useEffect(() => {
     generateRandomRelatedPost();
     generatePopularRelatedPost();
-    // Prism.highlightAll()
-    // hljs.initHighlighting();
-    return () => {
-    };
+    return () => {};
   }, []);
 
   const [randomPosts, setRandomPosts] = useState([]);
@@ -82,39 +82,39 @@ const Technologies = (props) => {
     setPopularPosts(selectedItems);
   };
 
-  const technology = props.technology;
-  const m = technology[0].attributes.body.content;
+  // const technology = props.technology;
+  // const m = technology[0].attributes.body.content;
 
   return (
     <Layout data={props}>
       <Head>
-        <title>{technology[0].attributes.title}</title>
-        <meta name="description" content={technology[0].attributes.metaDesc} />
+        <title>{title}</title>
+        <meta name="description" content={metaDesc} />
 
         <meta
           property="og:url"
-          content={`https://www.acehealthwealth.com/tecnologies/${technology[0].attributes.slug}/`}
+          content={`https://www.acehealthwealth.com/tecnologies/${slug}/`}
         />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content={technology[0].attributes.title} />
+        <meta property="og:title" content={title} />
         <meta
           property="og:description"
-          content={technology[0].attributes.metaDesc}
+          content={metaDesc}
         />
-        <meta property="og:image" content={technology[0].attributes.img} />
+        <meta property="og:image" content={img} />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="acehealthwealth.com" />
         <meta
           property="twitter:url"
-          content={`https://www.acehealthwealth.com/tecnologies/${technology[0].attributes.slug}/`}
+          content={`https://www.acehealthwealth.com/tecnologies/${slug}/`}
         />
-        <meta name="twitter:title" content={technology[0].attributes.title} />
+        <meta name="twitter:title" content={title} />
         <meta
           name="twitter:description"
-          content={technology[0].attributes.metaDesc}
+          content={metaDesc}
         />
-        <meta name="twitter:image" content={technology[0].attributes.img} />
+        <meta name="twitter:image" content={img} />
       </Head>
       <div className="container" style={{ marginTop: 120 }}>
         <div className="card feature-card">
@@ -123,48 +123,48 @@ const Technologies = (props) => {
             style={{ "--width": 1602, "--height": 903 }}
           >
             <Image
-              src={technology[0].attributes.img}
+              src={img}
               width="1602"
               height="903"
               loading="lazy"
-              alt={technology[0].attributes.title}
+              alt={title}
               className="img-cover"
             />
           </figure>
 
           <div style={{ flexDirection: "row", display: "flex", gap: 5 }}>
             <FacebookShareButton
-              url={`https://www.acehealthwealth.com/tecnologies/${technology[0].attributes.slug}/`}
+              url={`https://www.acehealthwealth.com/tecnologies/${slug}/`}
             >
               <FacebookIcon size={32} round />
             </FacebookShareButton>
             <PinterestShareButton
-              url={`https://www.acehealthwealth.com/tecnologies/${technology[0].attributes.slug}/`}
+              url={`https://www.acehealthwealth.com/tecnologies/${slug}/`}
             >
               <PinterestIcon size={32} round />
             </PinterestShareButton>
             <RedditShareButton
-              url={`https://www.acehealthwealth.com/tecnologies/${technology[0].attributes.slug}/`}
+              url={`https://www.acehealthwealth.com/tecnologies/${slug}/`}
             >
               <RedditIcon size={32} round />
             </RedditShareButton>
             <WhatsappShareButton
-              url={`https://www.acehealthwealth.com/tecnologies/${technology[0].attributes.slug}/`}
+              url={`https://www.acehealthwealth.com/tecnologies/${slug}/`}
             >
               <WhatsappIcon size={32} round />
             </WhatsappShareButton>
             <LinkedinShareButton
-              url={`https://www.acehealthwealth.com/tecnologies/${technology[0].attributes.slug}/`}
+              url={`https://www.acehealthwealth.com/tecnologies/${slug}/`}
             >
               <LinkedinIcon size={32} round />
             </LinkedinShareButton>
             <TelegramShareButton
-              url={`https://www.acehealthwealth.com/tecnologies/${technology[0].attributes.slug}/`}
+              url={`https://www.acehealthwealth.com/tecnologies/${slug}/`}
             >
               <TelegramIcon size={32} round />
             </TelegramShareButton>
             <TwitterShareButton
-              url={`https://www.acehealthwealth.com/tecnologies/${technology[0].attributes.slug}/`}
+              url={`https://www.acehealthwealth.com/tecnologies/${slug}/`}
             >
               <TwitterIcon size={32} round />
             </TwitterShareButton>
@@ -173,7 +173,7 @@ const Technologies = (props) => {
           <div className="card-content">
             <div className="card-wrapper">
               <div className="card-tag">
-                {technology[0].attributes.tags.map((tag, index) => {
+                {tags.map((tag, index) => {
                   return (
                     <Link href="#" className="span hover-2" key={index}>
                       #{tag}
@@ -186,7 +186,7 @@ const Technologies = (props) => {
                 <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
 
                 <span className="span">
-                  {technology[0].attributes.readTime} mins read
+                  {readTime} mins read
                 </span>
               </div>
             </div>
@@ -195,7 +195,7 @@ const Technologies = (props) => {
                 <div>
                   <p className="card-title">
                     By:{" "}
-                    {technology[0].attributes.author.data.attributes.username}
+                    {author.data.attributes.username}
                   </p>
 
                   {/* <p className="card-subtitle">25 Nov 2022</p> */}
@@ -208,9 +208,9 @@ const Technologies = (props) => {
                 fontSize: 30,
               }}
             >
-              {technology[0].attributes.title}
+              {title}
             </h1>
-            <div
+            {/* <div
               className="content"
               style={{
                 marginTop: 30,
@@ -221,11 +221,22 @@ const Technologies = (props) => {
               dangerouslySetInnerHTML={{
                 __html: m,
               }}
-            />
-            {technology[0].attributes.dataSources && (
+            /> */}
+            <div
+              className="content"
+              style={{
+                marginTop: 30,
+                wordSpacing: 3,
+                fontSize: 18,
+                fontWeight: "normal",
+              }}
+            >
+              <MDXRemote {...content} components={Image} />
+            </div>
+            {dataSources && (
               <div>
                 <h3>Data Sources:</h3>
-                {technology[0].attributes.dataSources.map((source, index) => {
+                {dataSources.map((source, index) => {
                   return (
                     <Link
                       href={source}
@@ -316,13 +327,32 @@ export async function getStaticProps(context) {
 
   const technology = await fetchTechnologies(technologyQueryWithFilter);
 
+  const content = await serialize(
+    technology.data.data[0].attributes.body.content,
+    {
+      mdxOptions: {
+        rehypePlugins: [rehypePrism, rehypeCodeTitles], // add rehype-prism-plus plugin here
+      },
+    }
+  );
+  const tech = technology.data.data[0].attributes;
+
   // console.log("technology ssrrrrrrrrrr", context);
 
   // Pass data to the page via props
   return {
     props: {
       // categories: categories.data.data,
-      technology: technology.data.data,
+      // technology: technology.data.data,
+      content: content,
+      title: tech.title,
+      metaDesc: tech.metaDesc,
+      tags: tech.tags,
+      slug: tech.slug,
+      readTime: tech.readTime,
+      img: tech.img,
+      dataSources: tech.dataSources,
+      author: tech.author,
     },
   };
 }

@@ -1,11 +1,12 @@
-import "../styles/globals.css";
 import Script from "next/script";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import * as gtag from "../lib/gtag";
 
 import "../styles/prism-one-dark.css"
-import 'highlight.js/styles/default.css';
+import "../styles/globals.css";
+
+
 
 
 
