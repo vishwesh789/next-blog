@@ -21,7 +21,6 @@
   --bg-prussian-blue: hsla(216, 33%, 20%, 1);
   --bg-oxford-blue: hsla(222, 44%, 13%, 1);
   --bg-oxford-blue-2: hsla(222, 47%, 11%, 1);
-  
 
   /** Text colors */
   --text-white: hsla(0, 0%, 100%, 1);
@@ -718,54 +717,50 @@ body.nav-active {
   margin-block-start: 30px;
 }
 
-.content strong{
-  color: #BCA136;
+.content strong {
+  color: #bca136;
 }
 
-.content h2{
+.content h2 {
   font-size: 2.2rem;
   color: #829356;
 }
 
 .content p:after,
-pre:after
- {
-   content: "";
-   display: block;
-   margin-top: 1em; /* change this value to adjust the height of the line break */
+pre:after,
+li::after {
+  content: "";
+  display: block;
+  margin-top: 1em; /* change this value to adjust the height of the line break */
 }
 
-.content
-h1:before,
-h2:before
- {
-   content: "";
-   display: block;
-   margin-top: 1em; /* change this value to adjust the height of the line break */
+.content h1:before,
+h2:before,
+h3::before {
+  content: "";
+  display: block;
+  margin-top: 1em; /* change this value to adjust the height of the line break */
 }
 
-
-.content
-p > strong:only-child:before
- {
-   content: "";
-   display: block;
-   margin-top: 3em; /* change this value to adjust the height of the line break */
+.content p > strong:only-child:before {
+  content: "";
+  display: block;
+  margin-top: 3em; /* change this value to adjust the height of the line break */
 }
 
-
-.content a strong{
-  color: #1D741B;
+.content a strong {
+  color: #1d741b;
 }
-
-
 
 .content pre code {
   /* Set font-size */
   font-size: 1em;
-
 }
 
+.content li{
+  list-style: decimal;
+  margin-left: 2em;
+}
 
 /*-----------------------------------*\
     #POPULAR TAGS

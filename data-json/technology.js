@@ -11,7 +11,7 @@ export const techJson = [
 		"readTime": 5,
 		"dataSources": null,
 		"createdAt": "2023-04-18T19:26:54.852Z",
-		"updatedAt": "2023-04-18T19:26:56.618Z",
+		"updatedAt": "2023-04-30T00:18:22.415Z",
 		"publishedAt": "2023-04-18T19:26:56.615Z"
 	},
 	{
@@ -26,7 +26,7 @@ export const techJson = [
 		"readTime": 8,
 		"dataSources": null,
 		"createdAt": "2023-04-18T19:30:25.702Z",
-		"updatedAt": "2023-04-18T19:30:27.928Z",
+		"updatedAt": "2023-04-29T22:06:02.894Z",
 		"publishedAt": "2023-04-18T19:30:27.926Z"
 	},
 	{
@@ -41,7 +41,7 @@ export const techJson = [
 		"readTime": 5,
 		"dataSources": null,
 		"createdAt": "2023-04-18T19:33:47.078Z",
-		"updatedAt": "2023-04-18T19:33:48.563Z",
+		"updatedAt": "2023-04-29T21:52:29.512Z",
 		"publishedAt": "2023-04-18T19:33:48.561Z"
 	},
 	{
@@ -56,7 +56,7 @@ export const techJson = [
 		"readTime": 5,
 		"dataSources": null,
 		"createdAt": "2023-04-18T19:46:37.476Z",
-		"updatedAt": "2023-04-18T19:46:45.095Z",
+		"updatedAt": "2023-04-29T15:47:24.528Z",
 		"publishedAt": "2023-04-18T19:46:45.092Z"
 	},
 	{
@@ -71,7 +71,7 @@ export const techJson = [
 		"readTime": 5,
 		"dataSources": null,
 		"createdAt": "2023-04-18T19:50:25.049Z",
-		"updatedAt": "2023-04-18T19:50:28.835Z",
+		"updatedAt": "2023-04-29T15:47:53.896Z",
 		"publishedAt": "2023-04-18T19:50:28.832Z"
 	},
 	{
@@ -86,7 +86,7 @@ export const techJson = [
 		"readTime": 5,
 		"dataSources": null,
 		"createdAt": "2023-04-18T19:53:03.556Z",
-		"updatedAt": "2023-04-18T19:53:05.090Z",
+		"updatedAt": "2023-04-29T15:50:27.144Z",
 		"publishedAt": "2023-04-18T19:53:05.087Z"
 	},
 	{
@@ -101,7 +101,7 @@ export const techJson = [
 		"readTime": 8,
 		"dataSources": null,
 		"createdAt": "2023-04-18T19:56:42.893Z",
-		"updatedAt": "2023-04-18T19:56:44.165Z",
+		"updatedAt": "2023-04-29T15:51:09.712Z",
 		"publishedAt": "2023-04-18T19:56:44.162Z"
 	},
 	{
@@ -116,7 +116,7 @@ export const techJson = [
 		"readTime": 8,
 		"dataSources": null,
 		"createdAt": "2023-04-18T19:59:11.580Z",
-		"updatedAt": "2023-04-18T19:59:12.809Z",
+		"updatedAt": "2023-04-29T15:52:24.955Z",
 		"publishedAt": "2023-04-18T19:59:12.807Z"
 	},
 	{
@@ -131,7 +131,7 @@ export const techJson = [
 		"readTime": 6,
 		"dataSources": null,
 		"createdAt": "2023-04-18T20:02:11.391Z",
-		"updatedAt": "2023-04-18T20:02:13.431Z",
+		"updatedAt": "2023-04-29T15:52:53.509Z",
 		"publishedAt": "2023-04-18T20:02:13.428Z"
 	},
 	{
@@ -146,7 +146,7 @@ export const techJson = [
 		"readTime": 5,
 		"dataSources": null,
 		"createdAt": "2023-04-18T20:04:52.110Z",
-		"updatedAt": "2023-04-18T20:04:53.588Z",
+		"updatedAt": "2023-04-29T15:53:22.132Z",
 		"publishedAt": "2023-04-18T20:04:53.585Z"
 	},
 	{
@@ -161,7 +161,7 @@ export const techJson = [
 		"readTime": 6,
 		"dataSources": null,
 		"createdAt": "2023-04-18T20:39:05.472Z",
-		"updatedAt": "2023-04-18T20:39:06.722Z",
+		"updatedAt": "2023-04-29T15:54:15.692Z",
 		"publishedAt": "2023-04-18T20:39:06.719Z"
 	},
 	{
@@ -176,7 +176,7 @@ export const techJson = [
 		"readTime": 7,
 		"dataSources": null,
 		"createdAt": "2023-04-18T20:42:06.272Z",
-		"updatedAt": "2023-04-18T20:42:08.565Z",
+		"updatedAt": "2023-04-29T15:55:26.309Z",
 		"publishedAt": "2023-04-18T20:42:08.563Z"
 	},
 	{
@@ -191,7 +191,7 @@ export const techJson = [
 		"readTime": 10,
 		"dataSources": null,
 		"createdAt": "2023-04-18T20:46:00.901Z",
-		"updatedAt": "2023-04-18T20:46:02.309Z",
+		"updatedAt": "2023-04-29T15:56:22.468Z",
 		"publishedAt": "2023-04-18T20:46:02.307Z"
 	},
 	{
@@ -206,7 +206,7 @@ export const techJson = [
 		"readTime": 6,
 		"dataSources": null,
 		"createdAt": "2023-04-18T20:47:59.286Z",
-		"updatedAt": "2023-04-18T20:48:00.879Z",
+		"updatedAt": "2023-04-29T15:57:21.405Z",
 		"publishedAt": "2023-04-18T20:48:00.878Z"
 	},
 	{
@@ -221,7 +221,7 @@ export const techJson = [
 		"readTime": 8,
 		"dataSources": null,
 		"createdAt": "2023-04-18T20:50:12.361Z",
-		"updatedAt": "2023-04-18T20:50:14.473Z",
+		"updatedAt": "2023-04-29T15:58:04.864Z",
 		"publishedAt": "2023-04-18T20:50:14.471Z"
 	},
 	{
@@ -236,7 +236,7 @@ export const techJson = [
 		"readTime": 5,
 		"dataSources": null,
 		"createdAt": "2023-04-18T20:52:12.466Z",
-		"updatedAt": "2023-04-18T20:52:13.852Z",
+		"updatedAt": "2023-04-29T15:58:46.498Z",
 		"publishedAt": "2023-04-18T20:52:13.851Z"
 	},
 	{
@@ -251,7 +251,7 @@ export const techJson = [
 		"readTime": 9,
 		"dataSources": null,
 		"createdAt": "2023-04-18T20:54:38.462Z",
-		"updatedAt": "2023-04-18T20:54:39.917Z",
+		"updatedAt": "2023-04-29T15:59:21.037Z",
 		"publishedAt": "2023-04-18T20:54:39.916Z"
 	},
 	{
@@ -266,7 +266,7 @@ export const techJson = [
 		"readTime": 9,
 		"dataSources": null,
 		"createdAt": "2023-04-18T20:57:20.719Z",
-		"updatedAt": "2023-04-18T20:57:22.368Z",
+		"updatedAt": "2023-04-29T22:10:52.940Z",
 		"publishedAt": "2023-04-18T20:57:22.365Z"
 	},
 	{
@@ -281,7 +281,7 @@ export const techJson = [
 		"readTime": 8,
 		"dataSources": null,
 		"createdAt": "2023-04-18T21:00:52.668Z",
-		"updatedAt": "2023-04-18T21:00:54.340Z",
+		"updatedAt": "2023-04-29T22:12:08.421Z",
 		"publishedAt": "2023-04-18T21:00:54.339Z"
 	},
 	{
@@ -296,7 +296,7 @@ export const techJson = [
 		"readTime": 8,
 		"dataSources": null,
 		"createdAt": "2023-04-18T21:03:33.494Z",
-		"updatedAt": "2023-04-18T21:03:34.897Z",
+		"updatedAt": "2023-04-29T22:15:08.736Z",
 		"publishedAt": "2023-04-18T21:03:34.895Z"
 	},
 	{
@@ -311,7 +311,7 @@ export const techJson = [
 		"readTime": 6,
 		"dataSources": null,
 		"createdAt": "2023-04-19T14:06:27.428Z",
-		"updatedAt": "2023-04-19T14:06:28.874Z",
+		"updatedAt": "2023-04-29T22:16:50.613Z",
 		"publishedAt": "2023-04-19T14:06:28.871Z"
 	},
 	{
@@ -326,7 +326,7 @@ export const techJson = [
 		"readTime": 10,
 		"dataSources": null,
 		"createdAt": "2023-04-19T14:10:39.646Z",
-		"updatedAt": "2023-04-19T14:10:46.736Z",
+		"updatedAt": "2023-04-29T22:18:06.614Z",
 		"publishedAt": "2023-04-19T14:10:46.733Z"
 	},
 	{
@@ -341,7 +341,7 @@ export const techJson = [
 		"readTime": 6,
 		"dataSources": null,
 		"createdAt": "2023-04-19T14:26:51.366Z",
-		"updatedAt": "2023-04-19T14:26:52.549Z",
+		"updatedAt": "2023-04-29T22:18:49.783Z",
 		"publishedAt": "2023-04-19T14:26:52.547Z"
 	},
 	{
@@ -356,7 +356,7 @@ export const techJson = [
 		"readTime": 5,
 		"dataSources": null,
 		"createdAt": "2023-04-19T14:29:26.932Z",
-		"updatedAt": "2023-04-19T18:36:19.946Z",
+		"updatedAt": "2023-04-29T22:19:19.015Z",
 		"publishedAt": "2023-04-19T18:36:19.944Z"
 	},
 	{
@@ -371,7 +371,7 @@ export const techJson = [
 		"readTime": 6,
 		"dataSources": null,
 		"createdAt": "2023-04-19T14:32:35.675Z",
-		"updatedAt": "2023-04-19T14:32:36.977Z",
+		"updatedAt": "2023-04-29T22:20:24.228Z",
 		"publishedAt": "2023-04-19T14:32:36.974Z"
 	},
 	{
@@ -386,7 +386,7 @@ export const techJson = [
 		"readTime": 8,
 		"dataSources": null,
 		"createdAt": "2023-04-19T14:34:34.595Z",
-		"updatedAt": "2023-04-19T14:35:39.712Z",
+		"updatedAt": "2023-04-29T22:20:54.830Z",
 		"publishedAt": "2023-04-19T14:35:39.711Z"
 	},
 	{
@@ -401,7 +401,7 @@ export const techJson = [
 		"readTime": 8,
 		"dataSources": null,
 		"createdAt": "2023-04-19T18:38:46.397Z",
-		"updatedAt": "2023-04-19T18:38:47.486Z",
+		"updatedAt": "2023-04-29T22:21:49.041Z",
 		"publishedAt": "2023-04-19T18:38:47.484Z"
 	},
 	{
@@ -416,7 +416,7 @@ export const techJson = [
 		"readTime": 8,
 		"dataSources": null,
 		"createdAt": "2023-04-19T18:40:55.654Z",
-		"updatedAt": "2023-04-19T18:40:56.965Z",
+		"updatedAt": "2023-04-30T16:24:27.534Z",
 		"publishedAt": "2023-04-19T18:40:56.963Z"
 	},
 	{
@@ -431,7 +431,7 @@ export const techJson = [
 		"readTime": 8,
 		"dataSources": null,
 		"createdAt": "2023-04-19T18:43:01.448Z",
-		"updatedAt": "2023-04-19T18:43:05.083Z",
+		"updatedAt": "2023-04-30T16:25:32.507Z",
 		"publishedAt": "2023-04-19T18:43:05.081Z"
 	},
 	{
@@ -446,7 +446,7 @@ export const techJson = [
 		"readTime": 7,
 		"dataSources": null,
 		"createdAt": "2023-04-19T18:45:19.265Z",
-		"updatedAt": "2023-04-19T18:45:20.790Z",
+		"updatedAt": "2023-04-30T16:26:39.611Z",
 		"publishedAt": "2023-04-19T18:45:20.788Z"
 	},
 	{
@@ -461,7 +461,7 @@ export const techJson = [
 		"readTime": 7,
 		"dataSources": null,
 		"createdAt": "2023-04-19T18:47:53.703Z",
-		"updatedAt": "2023-04-19T18:47:55.047Z",
+		"updatedAt": "2023-04-30T16:27:13.535Z",
 		"publishedAt": "2023-04-19T18:47:55.043Z"
 	},
 	{
@@ -476,7 +476,7 @@ export const techJson = [
 		"readTime": 7,
 		"dataSources": null,
 		"createdAt": "2023-04-19T18:50:06.316Z",
-		"updatedAt": "2023-04-19T18:50:07.618Z",
+		"updatedAt": "2023-04-30T16:27:45.011Z",
 		"publishedAt": "2023-04-19T18:50:07.615Z"
 	},
 	{
@@ -491,7 +491,7 @@ export const techJson = [
 		"readTime": 7,
 		"dataSources": null,
 		"createdAt": "2023-04-19T19:24:51.450Z",
-		"updatedAt": "2023-04-19T19:24:52.613Z",
+		"updatedAt": "2023-04-30T16:28:43.531Z",
 		"publishedAt": "2023-04-19T19:24:52.611Z"
 	},
 	{
@@ -506,7 +506,7 @@ export const techJson = [
 		"readTime": 7,
 		"dataSources": null,
 		"createdAt": "2023-04-19T19:27:51.032Z",
-		"updatedAt": "2023-04-19T19:27:52.971Z",
+		"updatedAt": "2023-04-30T16:29:13.009Z",
 		"publishedAt": "2023-04-19T19:27:52.970Z"
 	},
 	{
@@ -521,7 +521,7 @@ export const techJson = [
 		"readTime": 9,
 		"dataSources": null,
 		"createdAt": "2023-04-19T19:30:27.679Z",
-		"updatedAt": "2023-04-19T19:30:30.354Z",
+		"updatedAt": "2023-04-30T16:30:04.107Z",
 		"publishedAt": "2023-04-19T19:30:30.353Z"
 	},
 	{
@@ -536,7 +536,7 @@ export const techJson = [
 		"readTime": 8,
 		"dataSources": null,
 		"createdAt": "2023-04-19T19:33:58.686Z",
-		"updatedAt": "2023-04-19T19:33:59.817Z",
+		"updatedAt": "2023-04-30T16:30:45.361Z",
 		"publishedAt": "2023-04-19T19:33:59.815Z"
 	},
 	{
@@ -551,7 +551,7 @@ export const techJson = [
 		"readTime": 10,
 		"dataSources": null,
 		"createdAt": "2023-04-19T19:36:20.033Z",
-		"updatedAt": "2023-04-19T19:36:21.267Z",
+		"updatedAt": "2023-04-30T16:31:12.611Z",
 		"publishedAt": "2023-04-19T19:36:21.265Z"
 	},
 	{
@@ -566,8 +566,8 @@ export const techJson = [
 		"readTime": 8,
 		"dataSources": null,
 		"createdAt": "2023-04-19T19:38:59.550Z",
-		"updatedAt": "2023-04-19T19:39:00.622Z",
-		"publishedAt": "2023-04-19T19:39:00.620Z"
+		"updatedAt": "2023-04-30T16:34:14.025Z",
+		"publishedAt": "2023-04-30T16:34:14.022Z"
 	},
 	{
 		"id": 39,
@@ -581,7 +581,7 @@ export const techJson = [
 		"readTime": 9,
 		"dataSources": null,
 		"createdAt": "2023-04-19T19:41:51.408Z",
-		"updatedAt": "2023-04-19T19:41:52.436Z",
+		"updatedAt": "2023-04-30T16:34:53.999Z",
 		"publishedAt": "2023-04-19T19:41:52.434Z"
 	},
 	{
@@ -596,7 +596,7 @@ export const techJson = [
 		"readTime": 10,
 		"dataSources": null,
 		"createdAt": "2023-04-19T19:45:08.295Z",
-		"updatedAt": "2023-04-19T19:45:09.937Z",
+		"updatedAt": "2023-04-30T16:35:37.333Z",
 		"publishedAt": "2023-04-19T19:45:09.935Z"
 	},
 	{
@@ -611,7 +611,7 @@ export const techJson = [
 		"readTime": 8,
 		"dataSources": null,
 		"createdAt": "2023-04-19T19:47:46.463Z",
-		"updatedAt": "2023-04-19T19:47:47.825Z",
+		"updatedAt": "2023-04-30T16:36:34.425Z",
 		"publishedAt": "2023-04-19T19:47:47.823Z"
 	},
 	{
@@ -626,7 +626,7 @@ export const techJson = [
 		"readTime": 6,
 		"dataSources": null,
 		"createdAt": "2023-04-19T19:53:12.308Z",
-		"updatedAt": "2023-04-19T19:53:13.387Z",
+		"updatedAt": "2023-04-30T16:37:14.965Z",
 		"publishedAt": "2023-04-19T19:53:13.384Z"
 	},
 	{
@@ -641,7 +641,7 @@ export const techJson = [
 		"readTime": 8,
 		"dataSources": null,
 		"createdAt": "2023-04-19T19:55:43.578Z",
-		"updatedAt": "2023-04-19T19:55:53.817Z",
+		"updatedAt": "2023-04-30T16:37:49.004Z",
 		"publishedAt": "2023-04-19T19:55:53.815Z"
 	},
 	{
@@ -656,7 +656,7 @@ export const techJson = [
 		"readTime": 6,
 		"dataSources": null,
 		"createdAt": "2023-04-19T19:59:14.846Z",
-		"updatedAt": "2023-04-19T19:59:16.014Z",
+		"updatedAt": "2023-04-30T16:38:16.387Z",
 		"publishedAt": "2023-04-19T19:59:16.013Z"
 	},
 	{
@@ -671,7 +671,7 @@ export const techJson = [
 		"readTime": 7,
 		"dataSources": null,
 		"createdAt": "2023-04-19T20:02:26.188Z",
-		"updatedAt": "2023-04-19T20:02:27.895Z",
+		"updatedAt": "2023-04-30T16:38:50.217Z",
 		"publishedAt": "2023-04-19T20:02:27.892Z"
 	},
 	{
@@ -686,7 +686,7 @@ export const techJson = [
 		"readTime": 8,
 		"dataSources": null,
 		"createdAt": "2023-04-19T20:08:45.795Z",
-		"updatedAt": "2023-04-19T20:08:46.975Z",
+		"updatedAt": "2023-04-30T16:39:19.671Z",
 		"publishedAt": "2023-04-19T20:08:46.971Z"
 	},
 	{
@@ -701,7 +701,7 @@ export const techJson = [
 		"readTime": 8,
 		"dataSources": null,
 		"createdAt": "2023-04-19T20:11:02.437Z",
-		"updatedAt": "2023-04-19T20:11:03.638Z",
+		"updatedAt": "2023-04-30T16:39:58.413Z",
 		"publishedAt": "2023-04-19T20:11:03.636Z"
 	},
 	{
@@ -716,7 +716,7 @@ export const techJson = [
 		"readTime": 8,
 		"dataSources": null,
 		"createdAt": "2023-04-19T20:13:31.836Z",
-		"updatedAt": "2023-04-19T20:13:32.955Z",
+		"updatedAt": "2023-04-30T16:40:42.860Z",
 		"publishedAt": "2023-04-19T20:13:32.952Z"
 	},
 	{
@@ -731,7 +731,7 @@ export const techJson = [
 		"readTime": 8,
 		"dataSources": null,
 		"createdAt": "2023-04-19T20:16:48.688Z",
-		"updatedAt": "2023-04-19T20:16:49.746Z",
+		"updatedAt": "2023-04-30T16:41:19.366Z",
 		"publishedAt": "2023-04-19T20:16:49.745Z"
 	},
 	{
@@ -746,7 +746,7 @@ export const techJson = [
 		"readTime": 8,
 		"dataSources": null,
 		"createdAt": "2023-04-19T20:20:23.254Z",
-		"updatedAt": "2023-04-19T20:20:24.304Z",
+		"updatedAt": "2023-04-30T16:43:04.992Z",
 		"publishedAt": "2023-04-19T20:20:24.302Z"
 	},
 	{
@@ -761,7 +761,7 @@ export const techJson = [
 		"readTime": 9,
 		"dataSources": null,
 		"createdAt": "2023-04-19T20:23:14.654Z",
-		"updatedAt": "2023-04-19T20:23:15.744Z",
+		"updatedAt": "2023-04-30T16:44:03.266Z",
 		"publishedAt": "2023-04-19T20:23:15.743Z"
 	},
 	{
@@ -776,7 +776,7 @@ export const techJson = [
 		"readTime": 10,
 		"dataSources": null,
 		"createdAt": "2023-04-19T20:25:16.810Z",
-		"updatedAt": "2023-04-19T20:25:18.529Z",
+		"updatedAt": "2023-04-30T16:44:52.950Z",
 		"publishedAt": "2023-04-19T20:25:18.527Z"
 	},
 	{
@@ -791,7 +791,7 @@ export const techJson = [
 		"readTime": 9,
 		"dataSources": null,
 		"createdAt": "2023-04-19T20:39:28.672Z",
-		"updatedAt": "2023-04-19T20:39:30.408Z",
+		"updatedAt": "2023-04-30T16:45:45.834Z",
 		"publishedAt": "2023-04-19T20:39:30.406Z"
 	},
 	{
@@ -806,8 +806,8 @@ export const techJson = [
 		"readTime": 8,
 		"dataSources": null,
 		"createdAt": "2023-04-19T20:41:53.717Z",
-		"updatedAt": "2023-04-19T20:41:54.854Z",
-		"publishedAt": "2023-04-19T20:41:54.851Z"
+		"updatedAt": "2023-04-30T16:57:48.526Z",
+		"publishedAt": "2023-04-30T16:50:04.656Z"
 	},
 	{
 		"id": 55,
@@ -821,7 +821,7 @@ export const techJson = [
 		"readTime": 8,
 		"dataSources": null,
 		"createdAt": "2023-04-19T20:44:06.811Z",
-		"updatedAt": "2023-04-19T20:44:08.164Z",
+		"updatedAt": "2023-04-30T17:12:36.655Z",
 		"publishedAt": "2023-04-19T20:44:08.162Z"
 	},
 	{
@@ -836,7 +836,7 @@ export const techJson = [
 		"readTime": 9,
 		"dataSources": null,
 		"createdAt": "2023-04-19T20:46:26.424Z",
-		"updatedAt": "2023-04-19T20:46:27.395Z",
+		"updatedAt": "2023-04-30T17:13:18.767Z",
 		"publishedAt": "2023-04-19T20:46:27.393Z"
 	},
 	{
@@ -851,7 +851,292 @@ export const techJson = [
 		"readTime": 10,
 		"dataSources": null,
 		"createdAt": "2023-04-19T20:48:48.309Z",
-		"updatedAt": "2023-04-19T20:48:49.578Z",
+		"updatedAt": "2023-04-30T17:13:47.928Z",
 		"publishedAt": "2023-04-19T20:48:49.576Z"
+	},
+	{
+		"id": 58,
+		"title": "10 C# tips and tricks every Unity developer should know",
+		"slug": "10-c-tips-and-tricks-every-unity-developer-should-know",
+		"img": "https://images.pexels.com/photos/7047002/pexels-photo-7047002.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+		"metaDesc": "C# is a powerful programming language that is widely used in game development, particularly with the Unity game engine. If you are a Unity developer looking to improve your skills and productivity, there are many tips and tricks that can help you achieve your goals more efficiently. In this article, we will go over 10 C# tips and tricks every Unity developer should know.",
+		"tags": [
+			"C# tips"
+		],
+		"readTime": 10,
+		"dataSources": null,
+		"createdAt": "2023-04-25T21:42:48.531Z",
+		"updatedAt": "2023-04-30T17:18:59.524Z",
+		"publishedAt": "2023-04-30T17:15:53.340Z"
+	},
+	{
+		"id": 59,
+		"title": "Using C# to create procedural content in Unity",
+		"slug": "using-c-to-create-procedural-content-in-unity",
+		"img": "https://images.pexels.com/photos/4148891/pexels-photo-4148891.jpeg?auto=compress&cs=tinysrgb&w=1600",
+		"metaDesc": "Procedural content generation is a powerful technique in game development that allows developers to create dynamic and randomized content, such as terrain, levels, items, and more. Unity, one of the most popular game engines, provides robust support for procedural content generation through its scripting language, C#. In this article, we will explore how to use C# to create procedural content in Unity.\n\n",
+		"tags": [
+			"procedural content in Unity"
+		],
+		"readTime": 5,
+		"dataSources": null,
+		"createdAt": "2023-04-26T22:30:47.768Z",
+		"updatedAt": "2023-04-30T17:32:27.752Z",
+		"publishedAt": "2023-04-28T00:48:56.111Z"
+	},
+	{
+		"id": 60,
+		"title": "Godot 2D Game Development: Tilesets, Sprite Animation, Parallax Scrolling",
+		"slug": "godot-2-d-game-development-tilesets-sprite-animation-parallax-scrolling",
+		"img": "https://images.pexels.com/photos/1346154/pexels-photo-1346154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+		"metaDesc": "Godot is a popular game engine that has been gaining popularity over the years due to its ease of use, powerful features, and open-source nature. It allows developers to create 2D and 3D games and supports multiple platforms, including Windows, macOS, Linux, iOS, and Android.\n\nIn this article, we will be focusing on Godot's 2D game development capabilities, specifically on tilesets, sprite animation, and parallax scrolling.",
+		"tags": [
+			"godot"
+		],
+		"readTime": 8,
+		"dataSources": null,
+		"createdAt": "2023-05-02T01:02:51.162Z",
+		"updatedAt": "2023-05-02T01:09:15.666Z",
+		"publishedAt": "2023-05-02T01:06:31.960Z"
+	},
+	{
+		"id": 61,
+		"title": "What are some popular software tools used to create tilesets for 2D games?",
+		"slug": "what-are-some-popular-software-tools-used-to-create-tilesets-for-2-d-games",
+		"img": "https://images.pexels.com/photos/7776149/pexels-photo-7776149.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+		"metaDesc": "Tilesets are a key component in 2D game development. They provide the building blocks for game environments, allowing developers to create levels, backgrounds, and objects. There are a variety of software tools available for creating tilesets, each with their own strengths and weaknesses. In this article, we will take a look at some of the most popular software tools used to create tilesets for 2D games.\n\n",
+		"tags": [
+			"tilesets"
+		],
+		"readTime": 3,
+		"dataSources": null,
+		"createdAt": "2023-05-02T01:20:46.850Z",
+		"updatedAt": "2023-05-02T01:23:02.708Z",
+		"publishedAt": "2023-05-02T01:20:48.187Z"
+	},
+	{
+		"id": 62,
+		"title": "How to Make Smooth Sprite Animations in a 2D Game",
+		"slug": "how-to-make-smooth-sprite-animations-in-a-2-d-game",
+		"img": "https://images.pexels.com/photos/7773396/pexels-photo-7773396.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+		"metaDesc": "Sprite animations are an essential part of any 2D game. They add life and character to the game's graphics, making the gameplay more immersive and engaging for the player. However, creating smooth sprite animations can be a challenge, especially for beginners. In this article, we will provide you with some tips and tricks on how to create smooth sprite animations in a 2D game.\n",
+		"tags": [
+			"Sprite Animations"
+		],
+		"readTime": 3,
+		"dataSources": null,
+		"createdAt": "2023-05-02T01:27:44.307Z",
+		"updatedAt": "2023-05-02T01:27:46.198Z",
+		"publishedAt": "2023-05-02T01:27:46.196Z"
+	},
+	{
+		"id": 63,
+		"title": "What is Parallax Scrolling, and How Can It Be Used to Enhance the Visual Appeal of a 2D Game?",
+		"slug": "what-is-parallax-scrolling-and-how-can-it-be-used-to-enhance-the-visual-appeal-of-a-2-d-game",
+		"img": "https://images.pexels.com/photos/3593986/pexels-photo-3593986.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+		"metaDesc": "Parallax scrolling is a technique used in web and game development to create the illusion of depth and movement by layering different elements on a screen and moving them at different speeds. This technique has become increasingly popular in the development of 2D games because it allows developers to create visually stunning environments that can enhance the player's overall gaming experience.",
+		"tags": [
+			"Parallax Scrolling "
+		],
+		"readTime": 4,
+		"dataSources": null,
+		"createdAt": "2023-05-02T14:54:29.028Z",
+		"updatedAt": "2023-05-02T15:06:13.088Z",
+		"publishedAt": "2023-05-02T14:54:30.430Z"
+	},
+	{
+		"id": 64,
+		"title": "Best Practices for Designing Tilesets for 2D Games",
+		"slug": "best-practices-for-designing-tilesets-for-2-d-games",
+		"img": "https://images.pexels.com/photos/4056883/pexels-photo-4056883.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+		"metaDesc": "Tilesets are an essential aspect of 2D games. They are the building blocks that make up the game world, and designing them requires careful consideration. In this article, we'll go over some of the best practices for designing tilesets that will help you create an immersive and engaging game.",
+		"tags": [
+			"Tilesets for 2D Games"
+		],
+		"readTime": 3,
+		"dataSources": null,
+		"createdAt": "2023-05-02T15:17:02.563Z",
+		"updatedAt": "2023-05-02T15:17:04.818Z",
+		"publishedAt": "2023-05-02T15:17:04.816Z"
+	},
+	{
+		"id": 65,
+		"title": "Examples of 2D Games That Use Parallax Scrolling Effectively",
+		"slug": "examples-of-2-d-games-that-use-parallax-scrolling-effectively",
+		"img": "https://images.pexels.com/photos/12719124/pexels-photo-12719124.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+		"metaDesc": "Parallax scrolling is a technique used in 2D video games to create an illusion of depth by moving multiple layers of images at different speeds. This effect can be used to create a sense of depth, motion, and immersion in a game's environment. In this article, we will explore some examples of 2D games that use parallax scrolling effectively.",
+		"tags": [
+			"Parallax Scrolling"
+		],
+		"readTime": 4,
+		"dataSources": null,
+		"createdAt": "2023-05-02T15:27:33.129Z",
+		"updatedAt": "2023-05-02T15:27:34.845Z",
+		"publishedAt": "2023-05-02T15:27:34.843Z"
+	},
+	{
+		"id": 66,
+		"title": "Creating Mobile Games: 5 Tips for Creating Mobile Games with Godot",
+		"slug": "creating-mobile-games-5-tips-for-creating-mobile-games-with-godot",
+		"img": "https://images.pexels.com/photos/12718848/pexels-photo-12718848.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+		"metaDesc": "Mobile gaming has become a lucrative market in recent years, with millions of users downloading and playing games on their smartphones and tablets. As a game developer, it is essential to create mobile games that are not only entertaining but also optimized for mobile devices. In this article, we will explore five tips for creating mobile games with Godot, a popular game engine used by many indie game developers.",
+		"tags": [
+			"Mobile Games with Godot"
+		],
+		"readTime": 3,
+		"dataSources": null,
+		"createdAt": "2023-05-02T15:45:09.045Z",
+		"updatedAt": "2023-05-02T15:45:15.033Z",
+		"publishedAt": "2023-05-02T15:45:15.030Z"
+	},
+	{
+		"id": 67,
+		"title": "Character Animation: How to Animate Characters in Godot",
+		"slug": "character-animation-how-to-animate-characters-in-godot",
+		"img": "https://images.pexels.com/photos/1371985/pexels-photo-1371985.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+		"metaDesc": "Animation is a crucial aspect of game development. It brings life to the characters, making them more engaging and entertaining to players. In this article, we will explore how to animate characters in Godot, a popular game engine that supports 2D and 3D game development.",
+		"tags": [
+			"Animate Characters in Godot"
+		],
+		"readTime": 5,
+		"dataSources": null,
+		"createdAt": "2023-05-02T15:52:11.324Z",
+		"updatedAt": "2023-05-02T15:56:12.875Z",
+		"publishedAt": "2023-05-02T15:52:13.489Z"
+	},
+	{
+		"id": 68,
+		"title": "10 Level Design Tips for Godot Game Developers",
+		"slug": "10-level-design-tips-for-godot-game-developers",
+		"img": "https://images.pexels.com/photos/459762/pexels-photo-459762.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+		"metaDesc": "Level design is a crucial aspect of game development, as it plays a significant role in determining the player's experience. A well-designed level can make a game exciting and enjoyable, while a poorly designed one can make it tedious and frustrating. In this article, we will discuss ten level design tips for Godot game developers.\n\n",
+		"tags": [
+			"Godot Game"
+		],
+		"readTime": 3,
+		"dataSources": null,
+		"createdAt": "2023-05-02T16:34:04.422Z",
+		"updatedAt": "2023-05-02T16:34:05.621Z",
+		"publishedAt": "2023-05-02T16:34:05.620Z"
+	},
+	{
+		"id": 69,
+		"title": "Debugging Techniques for GDScript in Godot",
+		"slug": "debugging-techniques-for-gd-script-in-godot",
+		"img": "https://images.pexels.com/photos/7776091/pexels-photo-7776091.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+		"metaDesc": "Godot is a powerful game engine that allows developers to create games with ease. GDScript, the programming language used in Godot, is a versatile language that can help developers create complex games with ease. However, like any programming language, GDScript can be prone to bugs and errors. In this article, we'll go over some debugging techniques for GDScript in Godot.",
+		"tags": [
+			"Debugging Techniques for GDScript in Godot"
+		],
+		"readTime": 5,
+		"dataSources": null,
+		"createdAt": "2023-05-02T17:39:15.715Z",
+		"updatedAt": "2023-05-02T17:51:42.830Z",
+		"publishedAt": "2023-05-02T17:39:17.501Z"
+	},
+	{
+		"id": 70,
+		"title": "How to Integrate Third-Party Libraries in Godot",
+		"slug": "how-to-integrate-third-party-libraries-in-godot",
+		"img": "https://images.pexels.com/photos/6686141/pexels-photo-6686141.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+		"metaDesc": "Godot is a popular game engine that offers a wide range of features and functionalities to game developers. However, there are times when developers need to extend Godot's capabilities by integrating third-party libraries. In this article, we will discuss the process of integrating third-party libraries in Godot.\n",
+		"tags": [
+			"Third-Party Libraries in Godot"
+		],
+		"readTime": 3,
+		"dataSources": null,
+		"createdAt": "2023-05-02T17:51:00.206Z",
+		"updatedAt": "2023-05-02T17:51:02.821Z",
+		"publishedAt": "2023-05-02T17:51:02.818Z"
+	},
+	{
+		"id": 71,
+		"title": "Creating Custom Nodes in Godot: A Step-by-Step Guide",
+		"slug": "creating-custom-nodes-in-godot-a-step-by-step-guide",
+		"img": "https://images.pexels.com/photos/7773550/pexels-photo-7773550.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+		"metaDesc": "If you're working on a complex game or application in Godot, you may find that the built-in nodes just don't quite cut it. Fortunately, Godot makes it easy to create your own custom nodes that can be used just like any of the built-in nodes. In this tutorial, we'll walk through the process of creating a custom node step-by-step.",
+		"tags": [
+			"Custom Nodes in Godot"
+		],
+		"readTime": 3,
+		"dataSources": null,
+		"createdAt": "2023-05-02T17:59:28.463Z",
+		"updatedAt": "2023-05-02T18:01:10.147Z",
+		"publishedAt": "2023-05-02T17:59:29.965Z"
+	},
+	{
+		"id": 72,
+		"title": "Designing User Interfaces in Godot: Best Practices and Tips",
+		"slug": "designing-user-interfaces-in-godot-best-practices-and-tips",
+		"img": "https://images.pexels.com/photos/7773719/pexels-photo-7773719.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+		"metaDesc": "User interface design is a crucial aspect of game development. A well-designed UI can make the difference between a game that's easy and intuitive to play and one that's frustrating and confusing. In this article, we'll take a look at some of the best practices and tips for designing user interfaces in Godot.\n\n",
+		"tags": [
+			"User Interfaces in Godot"
+		],
+		"readTime": 3,
+		"dataSources": null,
+		"createdAt": "2023-05-02T18:12:50.902Z",
+		"updatedAt": "2023-05-02T18:12:52.674Z",
+		"publishedAt": "2023-05-02T18:12:52.672Z"
+	},
+	{
+		"id": 73,
+		"title": "5 Ways to Optimize Game Performance in Godot",
+		"slug": "5-ways-to-optimize-game-performance-in-godot",
+		"img": "https://images.pexels.com/photos/9071457/pexels-photo-9071457.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+		"metaDesc": "Godot is a popular open-source game engine that offers great performance for developing 2D and 3D games. However, as games get more complex, they can put a strain on system resources, resulting in poor game performance. In this article, we'll explore five ways to optimize game performance in Godot.",
+		"tags": [
+			"Optimize Game Performance in Godot"
+		],
+		"readTime": 3,
+		"dataSources": null,
+		"createdAt": "2023-05-02T18:21:18.138Z",
+		"updatedAt": "2023-05-02T18:21:37.207Z",
+		"publishedAt": "2023-05-02T18:21:37.203Z"
+	},
+	{
+		"id": 74,
+		"title": "Building Multiplayer Games in Godot: A Comprehensive Guide",
+		"slug": "building-multiplayer-games-in-godot-a-comprehensive-guide",
+		"img": "https://images.pexels.com/photos/9071454/pexels-photo-9071454.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+		"metaDesc": "In this comprehensive guide, we will go over the steps involved in building multiplayer games in Godot. We will cover everything from setting up the network, implementing multiplayer functionality, and creating a robust multiplayer game that can be enjoyed by players around the world.",
+		"tags": [
+			"Multiplayer Games in Godot"
+		],
+		"readTime": 5,
+		"dataSources": null,
+		"createdAt": "2023-05-02T18:31:34.037Z",
+		"updatedAt": "2023-05-02T18:50:26.800Z",
+		"publishedAt": "2023-05-02T18:31:35.383Z"
+	},
+	{
+		"id": 75,
+		"title": "Godot and AR: How to Create Immersive Augmented Reality Games",
+		"slug": "godot-and-ar-how-to-create-immersive-augmented-reality-games",
+		"img": "https://images.pexels.com/photos/7915446/pexels-photo-7915446.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+		"metaDesc": "Augmented reality (AR) has become increasingly popular in recent years, with its ability to blend the virtual and physical worlds to create a new, immersive experience for users. And with the rise of game engines like Godot, creating AR games has become more accessible than ever before. In this article, we will explore how to create immersive AR games using Godot.\n\n",
+		"tags": [
+			"Godot and AR"
+		],
+		"readTime": 5,
+		"dataSources": null,
+		"createdAt": "2023-05-02T19:02:38.682Z",
+		"updatedAt": "2023-05-02T19:03:48.141Z",
+		"publishedAt": "2023-05-02T19:03:48.139Z"
+	},
+	{
+		"id": 76,
+		"title": "Godot for Mobile: Tips and Best Practices for Developing Mobile Games",
+		"slug": "godot-for-mobile-tips-and-best-practices-for-developing-mobile-games",
+		"img": "https://images.pexels.com/photos/9068922/pexels-photo-9068922.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+		"metaDesc": "Developing mobile games is a challenging task, but with Godot game engine, it becomes a little bit easier. Godot is an open-source, cross-platform game engine that supports iOS and Android platforms. In this article, we will share some tips and best practices for developing mobile games using Godot.\n\n",
+		"tags": [
+			"Godot for Mobile"
+		],
+		"readTime": 6,
+		"dataSources": null,
+		"createdAt": "2023-05-02T19:35:45.565Z",
+		"updatedAt": "2023-05-02T19:35:48.169Z",
+		"publishedAt": "2023-05-02T19:35:48.167Z"
 	}
 ]

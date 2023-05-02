@@ -253,7 +253,7 @@ const Topics = (props) => {
                   <div className="slider-content">
                     <span className="slider-title">Technology</span>
 
-                    <p className="slider-subtitle">10 Articles</p>
+                    <p className="slider-subtitle">80 Articles</p>
                   </div>
                 </Link>
               </li>
@@ -303,7 +303,7 @@ const Topics = (props) => {
                   <div className="slider-content">
                     <span className="slider-title">Career</span>
 
-                    <p className="slider-subtitle">30 Articles</p>
+                    <p className="slider-subtitle">50 Articles</p>
                   </div>
                 </Link>
               </li>
