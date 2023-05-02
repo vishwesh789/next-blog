@@ -8,7 +8,9 @@
     "sitemap": "next-sitemap",
     "start": "next start",
     "lint": "next lint",
-    "export": "next build && next export"
+    "export": "next build && next export",
+    "preExport":"next build && next export && next-sitemap && next build && next export"
+    
   },
   "dependencies": {
     "@mdx-js/react": "^2.3.0",
