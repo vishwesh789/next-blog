@@ -742,11 +742,7 @@ h3::before {
   margin-top: 1em; /* change this value to adjust the height of the line break */
 }
 
-.content p > strong:only-child:before {
-  content: "";
-  display: block;
-  margin-top: 3em; /* change this value to adjust the height of the line break */
-}
+
 
 .content a strong {
   color: #1d741b;

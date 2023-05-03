@@ -976,7 +976,7 @@ export const techJson = [
 	},
 	{
 		"id": 66,
-		"title": "Creating Mobile Games: 5 Tips for Creating Mobile Games with Godot",
+		"title": "5 Tips for Creating Mobile Games with Godot",
 		"slug": "creating-mobile-games-5-tips-for-creating-mobile-games-with-godot",
 		"img": "https://images.pexels.com/photos/12718848/pexels-photo-12718848.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
 		"metaDesc": "Mobile gaming has become a lucrative market in recent years, with millions of users downloading and playing games on their smartphones and tablets. As a game developer, it is essential to create mobile games that are not only entertaining but also optimized for mobile devices. In this article, we will explore five tips for creating mobile games with Godot, a popular game engine used by many indie game developers.",
@@ -986,7 +986,7 @@ export const techJson = [
 		"readTime": 3,
 		"dataSources": null,
 		"createdAt": "2023-05-02T15:45:09.045Z",
-		"updatedAt": "2023-05-02T15:45:15.033Z",
+		"updatedAt": "2023-05-02T20:03:18.204Z",
 		"publishedAt": "2023-05-02T15:45:15.030Z"
 	},
 	{
@@ -1138,5 +1138,125 @@ export const techJson = [
 		"createdAt": "2023-05-02T19:35:45.565Z",
 		"updatedAt": "2023-05-02T19:35:48.169Z",
 		"publishedAt": "2023-05-02T19:35:48.167Z"
+	},
+	{
+		"id": 77,
+		"title": "A Beginner's Guide to Visual Scripting in Godot",
+		"slug": "a-beginner-s-guide-to-visual-scripting-in-godot",
+		"img": "https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+		"metaDesc": "Visual scripting is a form of programming that uses diagrams or flowcharts to represent code. It's a visual way of writing code that doesn't require users to write actual code. Instead, users can drag and drop pre-built code blocks, called nodes, to create game logic.",
+		"tags": [
+			"Visual Scripting in Godot"
+		],
+		"readTime": 4,
+		"dataSources": null,
+		"createdAt": "2023-05-03T14:18:33.427Z",
+		"updatedAt": "2023-05-03T14:20:42.442Z",
+		"publishedAt": "2023-05-03T14:20:42.438Z"
+	},
+	{
+		"id": 78,
+		"title": "Creating Advanced Audio Effects in Godot: A Step-by-Step Tutorial",
+		"slug": "creating-advanced-audio-effects-in-godot-a-step-by-step-tutorial",
+		"img": "https://images.pexels.com/photos/7915266/pexels-photo-7915266.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+		"metaDesc": "Godot is a powerful open-source game engine that offers a wide range of features for game development. One of its notable features is its audio system, which allows for the creation of advanced audio effects. In this tutorial, we will go over the steps to create advanced audio effects in Godot.",
+		"tags": [
+			"Audio Effects in Godot"
+		],
+		"readTime": 4,
+		"dataSources": null,
+		"createdAt": "2023-05-03T14:27:02.624Z",
+		"updatedAt": "2023-05-03T14:27:03.882Z",
+		"publishedAt": "2023-05-03T14:27:03.881Z"
+	},
+	{
+		"id": 79,
+		"title": "Building Virtual Reality Games in Godot: A Comprehensive Guide",
+		"slug": "building-virtual-reality-games-in-godot-a-comprehensive-guide",
+		"img": "https://images.pexels.com/photos/7915492/pexels-photo-7915492.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+		"metaDesc": "Virtual reality (VR) has become increasingly popular in recent years, and game development is no exception. Godot is a popular open-source game engine that provides developers with the tools needed to create immersive VR experiences. In this comprehensive guide, we'll explore the process of building virtual reality games in Godot, from creating your first scene to optimizing performance.\n",
+		"tags": [
+			"VR Games in Godot"
+		],
+		"readTime": 5,
+		"dataSources": null,
+		"createdAt": "2023-05-03T14:33:26.767Z",
+		"updatedAt": "2023-05-03T14:43:12.359Z",
+		"publishedAt": "2023-05-03T14:43:12.357Z"
+	},
+	{
+		"id": 80,
+		"title": "Creating Intelligent AI in Godot: Best Practices and Tips",
+		"slug": "creating-intelligent-ai-in-godot-best-practices-and-tips",
+		"img": "https://images.pexels.com/photos/7915364/pexels-photo-7915364.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+		"metaDesc": "Artificial Intelligence (AI) is an integral part of modern games. It allows developers to create more realistic and challenging game worlds that respond to the player's actions. In this article, we will explore the best practices and tips for creating intelligent AI in Godot, a popular game development engine.",
+		"tags": [
+			"AI in Godot"
+		],
+		"readTime": 4,
+		"dataSources": null,
+		"createdAt": "2023-05-03T14:50:59.244Z",
+		"updatedAt": "2023-05-03T14:51:00.574Z",
+		"publishedAt": "2023-05-03T14:51:00.572Z"
+	},
+	{
+		"id": 81,
+		"title": "Mastering Animation Techniques in Godot",
+		"slug": "mastering-animation-techniques-in-godot",
+		"img": "https://images.pexels.com/photos/7915501/pexels-photo-7915501.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+		"metaDesc": "Godot is an open-source game engine that has rapidly gained popularity in the game development community. It is a versatile engine that supports 2D and 3D game development, and its animation tools are some of the best available. In this article, we will be discussing some of the techniques you can use to master animation in Godot.",
+		"tags": [
+			"Animation in Godot"
+		],
+		"readTime": 6,
+		"dataSources": null,
+		"createdAt": "2023-05-03T14:56:49.796Z",
+		"updatedAt": "2023-05-03T14:56:51.652Z",
+		"publishedAt": "2023-05-03T14:56:51.649Z"
+	},
+	{
+		"id": 82,
+		"title": "A Deep Dive into Custom Shader Creation in Godot",
+		"slug": "a-deep-dive-into-custom-shader-creation-in-godot",
+		"img": "https://images.pexels.com/photos/7915574/pexels-photo-7915574.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+		"metaDesc": "Godot is an open-source game engine that provides users with a variety of tools to create and implement custom shaders. Custom shaders are an essential aspect of game development that allows developers to add unique visual effects to their games. In this article, we will explore the process of creating custom shaders in Godot.",
+		"tags": [
+			"Custom Shader in Godot"
+		],
+		"readTime": 6,
+		"dataSources": null,
+		"createdAt": "2023-05-03T15:29:09.659Z",
+		"updatedAt": "2023-05-03T15:41:55.821Z",
+		"publishedAt": "2023-05-03T15:29:31.039Z"
+	},
+	{
+		"id": 83,
+		"title": "Building Web Games with Godot: Tips and Best Practices",
+		"slug": "building-web-games-with-godot-tips-and-best-practices",
+		"img": "https://images.pexels.com/photos/7915258/pexels-photo-7915258.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+		"metaDesc": "Godot is a popular game engine that is open source and free to use. It is a versatile tool that can be used to create games for multiple platforms, including the web. In this article, we will discuss some tips and best practices for building web games with Godot.",
+		"tags": [
+			"Web Games with Godot"
+		],
+		"readTime": 4,
+		"dataSources": null,
+		"createdAt": "2023-05-03T16:02:33.122Z",
+		"updatedAt": "2023-05-03T16:02:36.348Z",
+		"publishedAt": "2023-05-03T16:02:36.344Z"
+	},
+	{
+		"id": 84,
+		"title": "A Comprehensive Guide to Physics in Godot Game Engine",
+		"slug": "a-comprehensive-guide-to-physics-in-godot-game-engine",
+		"img": "https://images.pexels.com/photos/7915522/pexels-photo-7915522.jpeg",
+		"metaDesc": "Godot is a popular open-source game engine that supports 2D and 3D game development. Physics plays an important role in game development, and Godot provides powerful physics simulation capabilities. In this guide, we will discuss the various aspects of physics in Godot, including physics bodies, collision detection, and joint constraints.",
+		"tags": [
+			"Physics in Godot Game Engine"
+		],
+		"readTime": 3,
+		"dataSources": null,
+		"createdAt": "2023-05-03T16:08:52.228Z",
+		"updatedAt": "2023-05-03T16:08:53.581Z",
+		"publishedAt": "2023-05-03T16:08:53.578Z"
 	}
 ]
