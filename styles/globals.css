@@ -726,36 +726,43 @@ body.nav-active {
   color: #829356;
 }
 
-.content p:after,
-pre:after,
-li::after {
-  content: "";
-  display: block;
-  margin-top: 1em; /* change this value to adjust the height of the line break */
+.content p
+ {
+   content: "";
+   display: block;
+   margin-top: 2em;
+   margin-bottom: 1em; /* change this value to adjust the height of the line break */
 }
 
-.content h1:before,
+.content
+h1:before,
 h2:before,
-h3::before {
-  content: "";
-  display: block;
-  margin-top: 1em; /* change this value to adjust the height of the line break */
+h3::before
+ {
+   content: "";
+   display: block;
+   margin-top: 1em; 
 }
 
 
 
-.content a strong {
-  color: #1d741b;
-}
 
-.content pre code {
-  /* Set font-size */
-  font-size: 1em;
+
+.content a strong{
+  color: #1D741B;
 }
 
 .content li{
   list-style: decimal;
   margin-left: 2em;
+  margin-top: 2em;
+   margin-bottom: 1em;
+}
+
+.content pre code {
+  /* Set font-size */
+  font-size: 1em;
+
 }
 
 /*-----------------------------------*\
