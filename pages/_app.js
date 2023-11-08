@@ -3,13 +3,8 @@ import { useRouter } from "next/router";
 import { useEffect } from "react";
 import * as gtag from "../lib/gtag";
 
-import "../styles/prism-one-dark.css"
+import "../styles/prism-one-dark.css";
 import "../styles/globals.css";
-
-
-
-
-
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
@@ -26,22 +21,35 @@ export default function App({ Component, pageProps }) {
   }, [router.events]);
 
   return (
-    <main >
-      <Script
-        strategy="afterInteractive"
-        async
-        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-      />
+    <main>
+      {process.env.NODE_ENV === "production" && (
+        <Script
+          strategy="afterInteractive"
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+        />
+      )}
 
-      <Script
-        id="google-analytics"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
+      {process.env.NODE_ENV === "production" && (
+        <Script
+          id="adsbygoogle-init"
+          strategy="afterInteractive"
+          crossOrigin="anonymous"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3199347075507532"
+        />
+      )}
+
+      {process.env.NODE_ENV === "production" && (
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
               window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
               gtag('config', 'G-TRQDM27YJT', {page_path: window.location.pathname,});`,
-        }}
-      />
+          }}
+        />
+      )}
       <Script
         type="module"
         src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
